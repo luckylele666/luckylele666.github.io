@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="le">
   <meta name="keywords" content="">
-  <title>三星 T7 拔草记 - Hexo</title>
+  <title>三星 T7 拔草记 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -57,7 +57,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Battle le</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Battle Le</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -229,7 +229,7 @@
 <p><img src="https://i.imgur.com/MVAQ6Lp.jpg" srcset="/img/loading.gif" alt="Toshiba 256 G"></p>
 <p><img src="https://i.imgur.com/UWZ9bTR.jpg" srcset="/img/loading.gif" alt="Samsung T7 500G"></p>
 <p>奇怪的是本地 SSD 的写入速度很惨淡，在测试 T7 写入速度的时候遇到「Writing is disabled」的情况，在基维.斯的指点下，这是没有移除分区的缘故，在「磁盘管理」找到 T7 删除分区（卷）。测试后写入速度依旧在 350  MB/s……这是从内存写入，是最理想的速度。删除分区后，我的电脑里没有 T7 的盘符，老司机说小场面，把刚刚的步骤重来一遍新建分区就可以，未果，重启或换个接口插入即可识别。我再次测试实际应用情况的写入速度，在 300 MB/s 的速度上很顽固😡这下我基本死心，据说是 TLC 颗粒常规水平，整盘写满会降速到零。这下我基本死心。还有另一个网友苏苏的建议是 SSD 的读写速度和主机 CPU 还有 RAM 有关（AS SSD 10 G 测试的 700 MB 速度很不错，相同配置的 DIY 硬盘还难以企及），还需要充钱就是了。他也建议我拿 T7 到别的电脑进行对比测试，看看是不是我的主机存在瓶颈限制。</p>
-<h2 id="DIY-方案"><a href="#DIY-方案" class="headerlink" title="DIY 方案"></a>DIY 方案</h2><p>如果我把三星 T7 退货后，考虑 DIY：</p>
+<h2 id="DIY-方案"><a href="#DIY-方案" class="headerlink" title="DIY 方案"></a>DIY 方案</h2><p>把三星 T7 退货后，考虑 DIY：</p>
 <p>方案一</p>
 <p>使用 MLC 颗粒的 <strong>Intel S3710</strong>，价格六百多。512 G 颗粒，冗余 112 G，标称 400 G，全盘读取 550 MB/s 不掉速，写入 有 430 MB/s。OEM 版本不能更新 SSD 固件（能提高性能和寿命），DC（数据中心）使用的存储设备，寿命很长，传家宝。</p>
 <p>方案二</p>
@@ -248,6 +248,7 @@
 <li>用的是 TLC 颗粒，有掉速通病</li>
 <li>溢价高，掉价快，半年掉价到 ￥600</li>
 </ol>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>三星客服说要插在 USB 3.2 Gen 2 才能用，雷电接口的请换三星 X5（微笑），而且电话里一副明摆着广告速度是远远跑不到的口吻，让我很不爽。商家说通电了不能退货，申请淘宝介入了，希望能顺利退货……</p>
 <p>P.S. 三星公关看到这篇文章别来找我……</p>
 
             </div>
@@ -377,7 +378,7 @@
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Battlele</span></a>
+      <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Battle</span></a>
       <i class="iconfont icon-love"></i>
       <a href="https://battlele.com" target="_blank" rel="nofollow noopener">
         <span>Le</span></a>
@@ -460,21 +461,6 @@
   </script>
 
 
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
 
 
 
