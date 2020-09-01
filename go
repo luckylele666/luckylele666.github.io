@@ -15,7 +15,7 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="le">
   <meta name="keywords" content="">
   <title>Zen and the Art of Life - Hexo</title>
 
