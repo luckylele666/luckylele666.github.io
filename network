@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>网络工程改造记 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-03-09 14:15" pubdate>
+      March 9, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">网络工程改造记</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h2 id="路由之选"><a href="#路由之选" class="headerlink" title="路由之选"></a>路由之选</h2><p>有台 TP-Link 路由， 尚能战。但在 2020 年春节前想改造「网络工程」，换台新设备。研究几天后选择斐讯 K3 。作为一家公司来说，斐讯无疑是失败的，但是路由器遗产却被一群爱好者追捧。</p>
+<p>它是千元以内的最佳之选。御三家里 ASUS，Netgear，Linksys, 千元以内的产品都不如斐讯 K3，在 PDD 上以仅 300 余元入手 Phicomm K3 (A1).</p>
+<p>据说 K3 最好的版本是<strong>非</strong>三星内存的 A1 . A2 版的用料不及 A1, 其他版本是不及两者的。</p>
+<h2 id="刷固件"><a href="#刷固件" class="headerlink" title="刷固件"></a>刷固件</h2><p>原厂固件有隐私泄露风险和广告污染问题。选择了好评度很高的 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dgHFRZLLmlsBIGDONGDONG">K3 tb</a> 梅林固件 (Merlin for Phicomm K3)。新手可以看视频 step by step 操作。</p>
+<p>我遇到的坑：putty 无法刷 telnt. 比较奇葩，尝试整整一天后才发现问题所在：没有<strong>关闭</strong> Windows <strong>防火墙</strong>，后面顺利。</p>
+<p>大致流程：官方 (原厂) 固件→→官方 Root 固件→→ K3 tb 固件 (许久不更新，还是非常流行)</p>
+<p>午夜时分，看到路由器的梅林界面跳出来，才心满意足的睡觉。</p>
+<h2 id="头疼的网线改造"><a href="#头疼的网线改造" class="headerlink" title="头疼的网线改造"></a>头疼的网线改造</h2><p>把 K3 放客厅，连上 LAN 口，做 AP. 在路由管理界面看到 K3 只有 100Mbps 速率。疑惑下，在 TG 路由器老鸟的指导下，开始网线改造。挪开电视机柜，看到瞠目结舌的一幕。</p>
+<p><img src="https://i.imgur.com/ubSc2aA.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>让我强迫症犯了呀</p>
+</blockquote>
+<p>网口插座出来的是一段纠缠在一起的铜丝。我这个小白都知道这是非常不规范的操作。吐槽后，开始动工。</p>
+<h3 id="上网硬件："><a href="#上网硬件：" class="headerlink" title="上网硬件："></a>上网硬件：</h3><ol>
+<li>ASUS AC66ub1 (主路由)</li>
+<li>Phicomm K3 (二级路由AP)</li>
+<li>PC (Killer 网卡)</li>
+<li>电视盒子</li>
+<li>若干台不同年份 iPhone. </li>
+<li>200Mbps 带宽光猫 (ZTE 3.0)</li>
+<li>CAT5E (超五类网线)</li>
+</ol>
+<h3 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h3><ol>
+<li>接线端子</li>
+<li>网线测通器</li>
+<li>尖嘴钳</li>
+<li>剪刀</li>
+<li>电工胶布</li>
+<li>镊子</li>
+</ol>
+<p>买来电工胶布，小心的把缠绕铜丝解开，当然用手触碰不会触电。解开后，按照 <strong>T568B</strong> 的线序排列：橙白，橙；绿白，蓝；蓝白，绿；棕白，棕。说来简单，当初非常坑人的装修工把网线留的极短。只有极小的空间可以操作，而且几年过去，网线外管老化，颜色不好区分。我用镊子 (没有工具可用美工刀片) 费了很大劲把网线塞进面板。测试——失败。线管质量太差，没有压破，再次尝试，还是没网速。</p>
+<p>又在网友建议下，在 JD 买了网线接线端子来应对网线太短问题。端子也不是完美的，几年后，端子里的油挥发，效果会打折扣。在大年三十，端子到了，还去电脑店借了网线测通器。</p>
+<p>又是一顿操作，可是留线实在太短，接端子后没有双绞，信号不好还是不能突破到千兆网速。</p>
+<p><img src="https://i.imgur.com/7vmMX9g.jpg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/VNSO25B.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>完工，至少能稳定用个几年吧<br>都是心酸……</p>
+</blockquote>
+<hr>
+<p>其实 K3 这么便宜是有重大设计缺陷的，散热差，十有八九会漏油！拆机麻烦。刷好 tb 固件没多久，5G 信号丢失了！</p>
+<p>可能的解决办法：</p>
+<ol>
+<li>拆机，用洗板水清洁 (手残党怕拆坏)</li>
+<li>放弃 tb 固件转用 LEDE 固件 (据说也有 LEDE 固件无 5G)</li>
+</ol>
+<p>反正速率也就 100Mbps. K3 搁置，成了一个信号无比强劲的 2.4Ghz 路由器 (两层覆盖没问题)……</p>
+<h2 id="再次折腾"><a href="#再次折腾" class="headerlink" title="再次折腾"></a>再次折腾</h2><p>年后，长时间宅在家里，受不了 200Mbps 的龟速。看到电信官网有很诱惑的价格，500 Mbps 只要150￥/mon ,可是本地区没有活动。现在套餐很浪费: 199￥/mon , 200 Mbps 宽带，固话加上三个手机号和 iTV. 除了宽带其余服务均未使用。以后去取消融合宽带，改为单宽带。</p>
+<p>电信给了提速到 500Mbps 的一年体验。我的路由，网线，网卡，光猫均支持千兆网络。但 Speedtest 测速无法跑满。联系电信，他们只负责光猫, 当天下午联系，当天傍晚就有装维人员上门更换 3.0 的光猫，<strong>我提出把光猫设置为桥接模式</strong>，第二天 TR069 远程同步。但是 WiFi 依旧没跑满，怀疑是 Killer 网卡驱动问题，更新后，可以跑满，可是不稳定，而且待机后会有 BSOD (蓝屏), 写邮件给 Killer Networking，答复是卸载重装。</p>
+<p>现在稳定跑到 300 Mbps, 偶尔蓝屏。精力有限，网络工程改造至此告一段落……</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/network/">network</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/accident">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">走出车祸</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/RSS">
+                        <span class="hidden-mobile">First RSS Feed</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "网络工程改造记&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

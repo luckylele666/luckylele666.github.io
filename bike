@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>单车梦 (上) - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-27 22:30" pubdate>
+      February 27, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">单车梦 (上)</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p><img src="https://i.imgur.com/KjehOkS.jpg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/AB72H2Q.jpg" srcset="/img/loading.gif"></p>
+<h2 id="梦的开始"><a href="#梦的开始" class="headerlink" title="梦的开始"></a>梦的开始</h2><p>对于大部分人而言，自行车是种交通工具，对于我和我的朋友来说，这是一种生活方式。我们在自行车上有太多的回忆，快乐的，难忘的，痛的深刻的…… 自行车运动让我脱胎换骨，从此不宅。耐力运动很诚实，付出汗水，获得收获。</p>
+<p>其中的快乐与挫折，在我生活中交替往复，也经历过许多次摔车事故，最近那回在我的下颌留下了永远的痕迹。我开怀大笑过，也遍体鳞伤过，但不曾为此后悔过。很早认识了 Tree, 他朋友圈的照片永远是骑车。向往和他们一起在大山与城市间穿梭，在周末抛下烦恼，穿锁鞋戴盔只管骑。</p>
+<p>终于在 <strong>2016</strong> 年买了人生中第一辆公路车：Specialized Allez (法语: 加油)。</p>
+<h2 id="山海骑观"><a href="#山海骑观" class="headerlink" title="山海骑观"></a>山海骑观</h2><p>刚开始只会刷街，绕着骑车圣地 DQ 湖，一圈一圈的刷，是个周末骑士。</p>
+<p>2017 年 4 月，在舟山有个单车嘉年华。很 lucky 抽到免费名额，在米哥的介绍下和车友包下大巴同赴舟山。都是老司机，交流后学了很多。抵达后领赛事包，一个束绳袋里有号码牌，计时芯片，路线图，能量胶。晚上大伙儿一道享受海鲜盛宴 (车友惯例)，听他们讲骑车的故事。当晚兴奋的睡不着，凌晨四点就按耐不住起床，穿戴整齐只等发枪。</p>
+<p>组委会重金承包发车地——景区大青山，我们得以骑着车领略山海奇观。盘山而上，迎面就是大海。随着太阳升起，踩着单车在这山与海之间穿梭。涛声入耳，伴随着链条和飞轮的摩擦声，仿佛是这世间最美妙的音乐🎵</p>
+<blockquote>
+<p>海明威: 透过骑自行车，你能领略到一个国家最好的风景——你得挥汗征服上坡，尔后吹风沿海岸线下滑</p>
+</blockquote>
+<p>这不就是我所体会的吗？之后大青山不再对骑友开放，真幸运~ 下坡后经过海鲜加工厂，海味扑面而来，海的味道，我知道😄 平时独自骑，不会跟车，车友们破风，我呆在车队后方，省下很多体力。</p>
+<p>跟车技能是车手必须会的，一个人不可能单枪匹马走很远，要团队合作。彭于晏主演的《破风》就是这样的故事。老司机们带队，我努力跟住，很享受。骑到80km，有个车友爆胎，车队停下来。带头民哥直接徒手扒胎，换胎也是车手必须会的。</p>
+<p>还有30km，我体力不支，掉队，和他们打了声招呼，独自继续。期间有许多车友从我身边经过，鼓励我，虽然非常痛苦，但仍坚持着，队友们都在终点等着呢。有个靓丽的身影在眼前出现，一位竖着长马尾的女生，哇！女生都可以这么酷，我又有了精神，咬着牙骑到终点。队友们都笑我，看见妹子就有了能量，那位女生也笑了，后来也骑过几次车，后话。身体从未有如此疲惫，上学时跑 1000m 的程度也比上，回家后大餐一顿，倒头就睡。</p>
+<p>舟山之旅是单车梦开始的地方，在风景如画的地方，和一群志同道合的朋友们一起骑车是多么幸运，这是骑车带给我的，我珍惜这种机会。</p>
+<h2 id="追风"><a href="#追风" class="headerlink" title="追风"></a>追风</h2><p>单车 summer holiday, 闹钟在凌晨五点响起，想想今天的目的，立马醒了。吃完早餐带着补给食物冲出家门，战车已经在汽车里，点火出发，高速上大多是载货的大型卡车，他们为了生计，这一点我很幸运。</p>
+<p>到了目的地，抹防晒霜，穿戴装备，这个过程很长：抽紧鞋带，整理衣服。从头盔到锁鞋，装备有十种之多。有着和我一样穿着紧身衣的车友，有人在热身，有的还在啃早饭，有的则跃跃欲试，盼着出发。平时大家难得一聚，独自「黑练」(一个人偷偷练)。车友约骑，看看壕老王有没有升级最新装备，功率涨了多少，单车界以 Power (功率) 论英雄。</p>
+<p>好战者，起步就想拉爆，但哪位是盏省油的灯。刚刚还在啃饭团的家伙，立马就能迎战，「挑事者」眼见各位好汉都进步不少，慢了下来，一段和平期。一会儿，刚刚吃饱的家伙，又开始加速，大家一路拉扯前进，谈笑风声，面色照旧。清早的太阳是温柔的姑娘，不会给以颜色。早风是那么舒服，路上行人很少，车流也不多，享受早起的「精神气」，熬夜看环法的黑眼圈都消失了。</p>
+<p>从这个山头翻到另一座，翻完两座山已是正午时分，太阳渐渐的不那么可爱。哦，正炙烤着我们，在「停车吃饭」的大木牌召唤下，进入农庄。数十个人坐一桌，近乎狼吞虎咽的战斗，菜还没转到我面前就没了…… 休息后，惬意的下坡，下到山底又开始爬坡，那也没关系，<strong>Keep Going</strong>! </p>
+<p>知了不知疲倦的鸣叫，我们也「不知疲倦」的踩踏 (累，都凭着一口仙气吊着) ，彼此互相鼓励，意志薄弱时推一把，或许没有同伴是骑不完的。汗水流进眼睛，心跳不断升高，双腿像灌了铅。只想找个阴凉处歇歇，想在坡上停下，但那会更不好过。终于在双眼模糊时，爬到顶，队友一脸轻松，我的狂风暴雨对于别人来说仅仅是清风拂面。</p>
+<p>队友都上来后，开始下坡，<strong>挥汗如雨的上坡，又酣畅淋漓的下坡</strong>，太阳也慢慢沉下去。回到起点，收拾装备，和队友告别。回去路上，控制油门的右腿简直在抽搐，还好不用踩离合器。到家还有一大堆装备衣服需要清洗，每次都觉得洗车比骑车还累……</p>
+<h3 id="不知不觉已是-2020-年，骑车快-4-个年头，如今我已不是那个追风少年，故事未结束，我还在追梦……"><a href="#不知不觉已是-2020-年，骑车快-4-个年头，如今我已不是那个追风少年，故事未结束，我还在追梦……" class="headerlink" title="不知不觉已是 2020 年，骑车快 4 个年头，如今我已不是那个追风少年，故事未结束，我还在追梦……"></a>不知不觉已是 2020 年，骑车快 4 个年头，如今我已不是那个追风少年，故事未结束，我还在追梦……</h3><p>P.S. 后续补图</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/bike/">bike</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/freedom">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">I WANT TO SAY</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog">
+                        <span class="hidden-mobile">Why Not Have Blog?</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "单车梦 (上)&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

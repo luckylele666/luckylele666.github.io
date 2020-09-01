@@ -1,322 +1,132 @@
-/* global CONFIG */
+// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
+// Copyright (C) 2017
+// Liam Huang <https://github.com/Liam0205>
+// This library is free software; you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation; either version 2.1 of the
+// License, or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+// 02110-1301 USA
+//
+// Updated by Rook1e <https://github.com/0x2E>
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (!CONFIG.path) {
-    console.warn('`hexo-generator-searchdb` plugin is not installed!');
-    return;
-  }
-  // Popup Window
-  let isfetched = false;
-  let datas;
-  const input = document.querySelector('.search-input');
+// eslint-disable-next-line no-unused-vars
+var searchFunc = function(path, search_id, content_id) {
+  // 0x00. environment initialization
+  'use strict';
+  var $input = document.getElementById(search_id);
+  var $resultContent = document.getElementById(content_id);
+  $resultContent.innerHTML = '<div class="m-auto text-center"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><br/>Loading...</div>';
+  $.ajax({
+    // 0x01. load xml file
+    url     : path,
+    dataType: 'xml',
+    success : function(xmlResponse) {
+      // 0x02. parse xml file
+      var dataList = $('entry', xmlResponse).map(function() {
+        return {
+          title  : $('title', this).text(),
+          content: $('content', this).text(),
+          url    : $('url', this).text()
+        };
+      }).get();
+      $resultContent.innerHTML = '';
 
-  const getIndexByWord = (words, text, caseSensitive = false) => {
-    const index = [];
-    const included = new Set();
-    words.forEach(word => {
-      if (CONFIG.localsearch.unescape) {
-        const div = document.createElement('div');
-        div.innerText = word;
-        word = div.innerHTML;
-      }
-      const wordLen = word.length;
-      if (wordLen === 0) return;
-      let startPosition = 0;
-      let position = -1;
-      if (!caseSensitive) {
-        text = text.toLowerCase();
-        word = word.toLowerCase();
-      }
-      while ((position = text.indexOf(word, startPosition)) > -1) {
-        index.push({ position, word });
-        included.add(word);
-        startPosition = position + wordLen;
-      }
-    });
-    // Sort index by position of keyword
-    index.sort((left, right) => {
-      if (left.position !== right.position) {
-        return left.position - right.position;
-      }
-      return right.word.length - left.word.length;
-    });
-    return [index, included];
-  };
-
-  // Merge hits into slices
-  const mergeIntoSlice = (start, end, index) => {
-    let item = index[0];
-    let { position, word } = item;
-    const hits = [];
-    const count = new Set();
-    while (position + word.length <= end && index.length !== 0) {
-      count.add(word);
-      hits.push({
-        position,
-        length: word.length
-      });
-      const wordEnd = position + word.length;
-
-      // Move to next position of hit
-      index.shift();
-      while (index.length !== 0) {
-        item = index[0];
-        position = item.position;
-        word = item.word;
-        if (wordEnd > position) {
-          index.shift();
-        } else {
-          break;
+      $input.addEventListener('input', function() {
+        // 0x03. parse query to keywords list
+        var str = '';
+        var keywords = this.value.trim().toLowerCase().split(/[\s-]+/);
+        $resultContent.innerHTML = '';
+        if (this.value.trim().length <= 0) {
+          return;
         }
-      }
-    }
-    return {
-      hits,
-      start,
-      end,
-      count: count.size
-    };
-  };
+        // 0x04. perform local searching
+        dataList.forEach(function(data) {
+          var isMatch = true;
+          if (!data.title || data.title.trim() === '') {
+            data.title = 'Untitled';
+          }
+          var orig_data_title = data.title.trim();
+          var data_title = orig_data_title.toLowerCase();
+          var orig_data_content = data.content.trim().replace(/<[^>]+>/g, '');
+          var data_content = orig_data_content.toLowerCase();
+          var data_url = data.url;
+          var index_title = -1;
+          var index_content = -1;
+          var first_occur = -1;
+          // only match articles with not empty contents
+          if (data_content !== '') {
+            keywords.forEach(function(keyword, i) {
+              index_title = data_title.indexOf(keyword);
+              index_content = data_content.indexOf(keyword);
 
-  // Highlight title and content
-  const highlightKeyword = (val, slice) => {
-    let result = '';
-    let index = slice.start;
-    for (const { position, length } of slice.hits) {
-      result += val.substring(index, position);
-      index = position + length;
-      result += `<mark class="search-keyword">${val.substr(position, length)}</mark>`;
-    }
-    result += val.substring(index, slice.end);
-    return result;
-  };
+              if (index_title < 0 && index_content < 0) {
+                isMatch = false;
+              } else {
+                if (index_content < 0) {
+                  index_content = 0;
+                }
+                if (i === 0) {
+                  first_occur = index_content;
+                }
+                //content_index.push({index_content:index_content, keyword_len:keyword_len});
+              }
+            });
+          } else {
+            isMatch = false;
+          }
+          // 0x05. show search results
+          if (isMatch) {
+            str += '<a href=\'' + data_url + '\' class=\'list-group-item list-group-item-action font-weight-bolder search-list-title\'>' + orig_data_title + '</a>';
+            var content = orig_data_content;
+            if (first_occur >= 0) {
+              // cut out 100 characters
+              var start = first_occur - 20;
+              var end = first_occur + 80;
 
-  const getResultItems = keywords => {
-    const resultItems = [];
-    datas.forEach(({ title, content, url }) => {
-      // The number of different keywords included in the article.
-      const [indexOfTitle, keysOfTitle] = getIndexByWord(keywords, title);
-      const [indexOfContent, keysOfContent] = getIndexByWord(keywords, content);
-      const includedCount = new Set([...keysOfTitle, ...keysOfContent]).size;
+              if (start < 0) {
+                start = 0;
+              }
 
-      // Show search results
-      const hitCount = indexOfTitle.length + indexOfContent.length;
-      if (hitCount === 0) return;
+              if (start === 0) {
+                end = 100;
+              }
 
-      const slicesOfTitle = [];
-      if (indexOfTitle.length !== 0) {
-        slicesOfTitle.push(mergeIntoSlice(0, title.length, indexOfTitle));
-      }
+              if (end > content.length) {
+                end = content.length;
+              }
 
-      let slicesOfContent = [];
-      while (indexOfContent.length !== 0) {
-        const item = indexOfContent[0];
-        const { position } = item;
-        // Cut out 100 characters. The maxlength of .search-input is 80.
-        const start = Math.max(0, position - 20);
-        const end = Math.min(content.length, position + 80);
-        slicesOfContent.push(mergeIntoSlice(start, end, indexOfContent));
-      }
+              var match_content = content.substring(start, end);
 
-      // Sort slices in content by included keywords' count and hits' count
-      slicesOfContent.sort((left, right) => {
-        if (left.count !== right.count) {
-          return right.count - left.count;
-        } else if (left.hits.length !== right.hits.length) {
-          return right.hits.length - left.hits.length;
-        }
-        return left.start - right.start;
-      });
+              // highlight all keywords
+              keywords.forEach(function(keyword) {
+                var regS = new RegExp(keyword, 'gi');
+                match_content = match_content.replace(regS, '<span class="search-word">' + keyword + '</span>');
+              });
 
-      // Select top N slices in content
-      const upperBound = parseInt(CONFIG.localsearch.top_n_per_article, 10);
-      if (upperBound >= 0) {
-        slicesOfContent = slicesOfContent.slice(0, upperBound);
-      }
-
-      let resultItem = '';
-
-      url = new URL(url, location.origin);
-      url.searchParams.append('highlight', keywords.join(' '));
-
-      if (slicesOfTitle.length !== 0) {
-        resultItem += `<li><a href="${url.href}" class="search-result-title">${highlightKeyword(title, slicesOfTitle[0])}</a>`;
-      } else {
-        resultItem += `<li><a href="${url.href}" class="search-result-title">${title}</a>`;
-      }
-
-      slicesOfContent.forEach(slice => {
-        resultItem += `<a href="${url.href}"><p class="search-result">${highlightKeyword(content, slice)}...</p></a>`;
-      });
-
-      resultItem += '</li>';
-      resultItems.push({
-        item: resultItem,
-        id  : resultItems.length,
-        hitCount,
-        includedCount
-      });
-    });
-    return resultItems;
-  };
-
-  const inputEventFunction = () => {
-    if (!isfetched) return;
-    const searchText = input.value.trim().toLowerCase();
-    const keywords = searchText.split(/[-\s]+/);
-    const resultContent = document.getElementById('search-result');
-    let resultItems = [];
-    if (searchText.length > 0) {
-      // Perform local searching
-      resultItems = getResultItems(keywords);
-    }
-    if (keywords.length === 1 && keywords[0] === '') {
-      resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>';
-    } else if (resultItems.length === 0) {
-      resultContent.innerHTML = '<div id="no-result"><i class="far fa-frown fa-5x"></i></div>';
-    } else {
-      resultItems.sort((left, right) => {
-        if (left.includedCount !== right.includedCount) {
-          return right.includedCount - left.includedCount;
-        } else if (left.hitCount !== right.hitCount) {
-          return right.hitCount - left.hitCount;
-        }
-        return right.id - left.id;
-      });
-      resultContent.innerHTML = `<ul class="search-result-list">${resultItems.map(result => result.item).join('')}</ul>`;
-      window.pjax && window.pjax.refresh(resultContent);
-    }
-  };
-
-  const fetchData = () => {
-    // Search DB path
-    const searchPath = CONFIG.root + CONFIG.path;
-    const isXml = !CONFIG.path.endsWith('json');
-    fetch(searchPath)
-      .then(response => response.text())
-      .then(res => {
-        // Get the contents from search data
-        isfetched = true;
-        datas = isXml ? [...new DOMParser().parseFromString(res, 'text/xml').querySelectorAll('entry')].map(element => {
-          return {
-            title  : element.querySelector('title').textContent,
-            content: element.querySelector('content').textContent,
-            url    : element.querySelector('url').textContent
-          };
-        }) : JSON.parse(res);
-        // Only match articles with non-empty titles
-        datas = datas.filter(data => data.title).map(data => {
-          data.title = data.title.trim();
-          data.content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
-          data.url = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-          return data;
+              str += '<p class=\'search-list-content\'>' + match_content + '...</p>';
+            }
+          }
         });
-        // Remove loading animation
-        inputEventFunction();
+        const input = $('#local-search-input');
+        if (str.indexOf('list-group-item') === -1) {
+          return input.addClass('invalid').removeClass('valid');
+        }
+        input.addClass('valid').removeClass('invalid');
+        $resultContent.innerHTML = str;
       });
-  };
-
-  /**
-   * This function returns the parsed url parameters of the
-   * current request. Multiple values per key are supported,
-   * it will always return arrays of strings for the value parts.
-   */
-  const getQueryParameters = () => {
-    const s = location.search;
-    const parts = s.substr(s.indexOf('?') + 1).split('&');
-    const result = {};
-    for (const part of parts) {
-      const [key, value] = part.split('=', 2);
-      if (key in result) {
-        result[key].push(value);
-      } else {
-        result[key] = [value];
-      }
-    }
-    return result;
-  };
-
-  // Highlight by wrapping node in mark elements with the given class name
-  const highlightText = (node, slice, className) => {
-    const val = node.nodeValue;
-    let index = slice.start;
-    const children = [];
-    for (const { position, length } of slice.hits) {
-      const text = document.createTextNode(val.substring(index, position));
-      index = position + length;
-      const mark = document.createElement('mark');
-      mark.className = className;
-      mark.appendChild(document.createTextNode(val.substr(position, length)));
-      children.push(text, mark);
-    }
-    node.nodeValue = val.substring(index, slice.end);
-    children.forEach(element => {
-      node.parentNode.insertBefore(element, node);
-    });
-  };
-
-  // Highlight the search words provided in the url in the text
-  const highlightSearchWords = () => {
-    const params = getQueryParameters();
-    const keywords = params.highlight ? params.highlight[0].split(/\+/).map(decodeURIComponent) : [];
-    const body = document.querySelector('.post-body');
-    if (!keywords.length || !body) return;
-    const walk = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, null, false);
-    const allNodes = [];
-    while (walk.nextNode()) {
-      if (!walk.currentNode.parentNode.matches('button, select, textarea')) allNodes.push(walk.currentNode);
-    }
-    allNodes.forEach(node => {
-      const [indexOfNode] = getIndexByWord(keywords, node.nodeValue);
-      if (!indexOfNode.length) return;
-      const slice = mergeIntoSlice(0, node.nodeValue.length, indexOfNode);
-      highlightText(node, slice, 'search-keyword');
-    });
-  };
-
-  if (CONFIG.localsearch.preload) {
-    fetchData();
-  }
-
-  if (CONFIG.localsearch.trigger === 'auto') {
-    input.addEventListener('input', inputEventFunction);
-  } else {
-    document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
-    input.addEventListener('keypress', event => {
-      if (event.key === 'Enter') {
-        inputEventFunction();
-      }
-    });
-  }
-
-  // Handle and trigger popup window
-  document.querySelectorAll('.popup-trigger').forEach(element => {
-    element.addEventListener('click', () => {
-      document.body.classList.add('search-active');
-      // Wait for search-popup animation to complete
-      setTimeout(() => input.focus(), 500);
-      if (!isfetched) fetchData();
-    });
-  });
-
-  // Monitor main search box
-  const onPopupClose = () => {
-    document.body.classList.remove('search-active');
-  };
-
-  document.querySelector('.search-pop-overlay').addEventListener('click', event => {
-    if (event.target === document.querySelector('.search-pop-overlay')) {
-      onPopupClose();
     }
   });
-  document.querySelector('.popup-btn-close').addEventListener('click', onPopupClose);
-  document.addEventListener('pjax:success', () => {
-    highlightSearchWords();
-    onPopupClose();
+  $(document).on('click', '#local-search-close', function() {
+    $('#local-search-input').val('').removeClass('invalid').removeClass('valid');
+    $('#local-search-result').html('');
   });
-  window.addEventListener('keyup', event => {
-    if (event.key === 'Escape') {
-      onPopupClose();
-    }
-  });
-});
+};

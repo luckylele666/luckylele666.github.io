@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>不完全的 iPhone 维修记录 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-21 20:00" pubdate>
+      June 21, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">不完全的 iPhone 维修记录</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p><img src="https://i.imgur.com/kUiCtqa.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>坐落于西湖畔的 Apple 零售店，地铁旁几十米，斜对面是 LV</p>
+</blockquote>
+<p>6 月 15 日，周一。一次不完全 iPhone 维修经历，但有借鉴意义，记录一下。</p>
+<h2 id="翻车坏手机"><a href="#翻车坏手机" class="headerlink" title="翻车坏手机"></a>翻车坏手机</h2><p>吃了个昨夜冰冻的 burger，冰镇味道好。 大早上很晒，骑着美团共享单车去学校，抵达后，想借着惯性跳上台阶 (老司机翻车现场)，用力过猛，摔了一跤，人没事。但是进校门刷手机发现屏幕不能滑动，我以为是天气过热导致的死机。随后就发现，似乎是屏幕出问题，Damn！请假去西湖 Apple 零售店检测。</p>
+<p>借了一百块纸币，进地铁过安检需要杭州「健康绿码」，手机用不了，只要输入身份证就能调出数据，呵呵……工作人员给了张我身份证尾号四位的一次性证明。地铁票也涨价，到市中心要七块钱，涨幅高达 1% ，路上没法用手机，当天包里有本《越狱》，在地铁里看起来，不是没法看，而是想不想看书的问题。</p>
+<h2 id="西湖-Apple"><a href="#西湖-Apple" class="headerlink" title="西湖 Apple"></a>西湖 Apple</h2><p>到了 Apple 零售店也需要「绿码」，在重庆解放碑的 Apple 就不用，杭州特色。店员非常认真，当然态度也很好，请我把 SIM 卡插入她的手机里用 HTML 5 接收验证码来验证我的「绿码」。</p>
+<p>随后预约检测，上到二楼，虽然是 weekday，来修设备的人还不少。排在两个人之后，虽然有那么多设备任意体验，但我却没有什么探索的兴趣，每次来 Apple 都不会细细体验，只有 「Today At Apple」 才好玩。有一个大叔是一家民宿的老板，房间里的灯坠落砸坏了客人的 iPad Pro 来维修，iPad 都是只换不修，也没有 Apple Care，他要大出血了。</p>
+<p><img src="https://i.imgur.com/WWiXTuR.jpg" srcset="/img/loading.gif"></p>
+<p>二十分钟的等待，轮到我，一个 Genius 小哥负责我的 case。先询问我有没有在保，否。有没有强制重启等基本操作，我说都试过，他推测是电池鼓包，拿进去检测，检测非常快，结果电池没有鼓包，最好的预期落空，不能申请电池鼓包返厂维修。Apple 官方的处理方式比较简单粗暴，排除一切潜在风险，哪里出问题就<strong>换</strong>。Genius 看到我 2018 年更换电池的记录，那次留的我表姐的信息，此次给我更新。说明手机号是非常<strong>重要</strong>的一个东西，永远存在诸多系统里，相当于身份证。虽然我选择相信苹果的政策会保护用户，但还是有泄露的风险。</p>
+<p>Genius 给出了屏幕维修的费用，含税需要 1000+，不出所料，贵。我的脑海里迅速浮现两种方案：</p>
+<ol>
+<li>去第三方维修</li>
+<li>换 iPhone SE 2 过渡到今年的新 iPhone</li>
+</ol>
+<p>我说把防水胶打上装回去吧，即使接下来要去第三方维修点，这就是我做事的风格。Genius 说装回去需要关闭「查找我的 iPhone」，屏幕划不了，用网页版的 iCloud 也接收不了绑定的 GV 的验证短信。小哥说国区可以跳过，但我的是美区账号无法操作，提醒我增加一个国内号码，我的想法是以后放在备用手机。所以没有关闭 iCloud 就帮我装回去了。没有手机可以导航去维修点，纯粹凭记忆怎么走也是一种挑战。</p>
+<h2 id="伪维修"><a href="#伪维修" class="headerlink" title="伪维修"></a>伪维修</h2><p>得益于打防水胶的操作，似乎经过取下电池的断电处理缘故，iPhone 恢复使用了，Lucky！不用破财当然很开心。但是屏幕的内屏留下了永久的白条状污染，还是有些损坏的。我的备份并不全，需要及时备份，下次可能就没有这么好运了。</p>
+<p>Apple 售后流程:</p>
+<ol>
+<li>预约/现场约</li>
+<li>描述问题 (故障经过) 和沟通</li>
+<li>分析，检测并等待，体验设备</li>
+<li>Genius 提供维修方案，选择 or 放弃 (完全免费)</li>
+</ol>
+<p>And</p>
+<ul>
+<li>iPhone 出问题首选去 Apple 零售店</li>
+<li>数据比设备价值高多了，取舍</li>
+<li>戴套贴膜 (我是裸奔的)，记得<strong>备份</strong></li>
+<li>留点现金在身边，落难了也有救</li>
+</ul>
+<p>This is one reason why I chose Apple🍎</p>
+<p>P.S. 同一天，朋友的赛道版阿尔法.罗密欧 Giulia 抢黄灯撞报废 (R.I.P)！但是他很淡定，出事后报警抽了根烟，这种事情发生了还能怎么办呢，冷静，稳妥处理。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/experience/">experience</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/contact-lens">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">隐形眼镜指南</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/glasses">
+                        <span class="hidden-mobile">挑眼镜的门道</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "不完全的 iPhone 维修记录&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Archives - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -43,7 +43,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -150,6 +150,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -159,39 +163,115 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          >
+          style=margin-top:0>
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">22 posts in total.</p>
-  <hr>
-  
+
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2020</p>
     
-    <a href="/ssd" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">三星 T7 拔草记</span>
-      <time style="float: right;">08-31</time>
-    </a>
-  
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/blog">Why Not Have Blog?</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog">
+          
+          
+            
+          
+          已经 2020 年，为啥要搭建一个自己的 Blog？原因很简单，想有个自己的 Internet Archives ，什么时候想到了就写一点。不用登录，没有那么多审查，排版随心所欲，主题也可以自己 DIY。自己集作者，编辑和出版社的功能于一体，想想都很棒😋
+漫漫假期，有的是时间,，Just Do It! 开始建造自己的 kingdom。
+Domain Name先在 Namesilo 买域名。常用的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-17 23:10" pubdate>
+              2020-02-17
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/skill/">skill</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
-    <a href="/display" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">显示器指南</span>
-      <time style="float: right;">08-28</time>
-    </a>
-  
     
-    <a href="/contact-lens" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">隐形眼镜指南</span>
-      <time style="float: right;">08-27</time>
-    </a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/legal-rights">法律维权之开庭记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/legal-rights">
+          
+          
+            
+          
+          
+记 2020 年 2 月 11 日，杭州互联网法院开庭。
+
+起因2019 年双十一，在天猫购买 RC5 锁鞋。许多天后商家以电话诱导取消订单，我拒绝。在 10 天后到货，鞋面有破损，联系商家换货，事情就来了……
+商家钻天猫规则漏洞，故意不发。一个月后，我联系天猫小二调解，未果。
+维权先联系当地 12315 介入。
+刚好听 ggtalk 的维权话题 Podcast 认识了 Manjusaka，捕蛇
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-11 16:30" pubdate>
+              2020-02-11
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/experience/">experience</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </span>
+  </nav>
   
-</div>
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -284,7 +364,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Archive&nbsp;",
+        "An elegant Material-Design theme for Hexo&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

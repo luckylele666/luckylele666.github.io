@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Why Not Have Blog? - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-17 23:10" pubdate>
+      February 17, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Why Not Have Blog?</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>已经 2020 年，为啥要搭建一个自己的 Blog？原因很简单，想有个自己的 Internet Archives ，什么时候想到了就写一点。不用登录，没有那么多审查，排版随心所欲，主题也可以自己 DIY。自己集作者，编辑和出版社的功能于一体，想想都很棒😋</p>
+<p>漫漫假期，有的是时间,，Just Do It! 开始建造自己的 kingdom。</p>
+<h2 id="Domain-Name"><a href="#Domain-Name" class="headerlink" title="Domain Name"></a>Domain Name</h2><p>先在 Namesilo 买<strong>域名</strong>。常用的 com, net, org 都已注册，又探索了 me, io 这类「潮流」域名，花了两天。终于想出个满意的名字「Battlele」。本着时时刻刻对世界充满期待和挑战的心态，充满活力的去战斗！「battle」 和 「le」放在一起，简短有力。</p>
+<h2 id="Blog-选择"><a href="#Blog-选择" class="headerlink" title="Blog 选择"></a>Blog 选择</h2><p>起初找了个无需本地化部署和生成的方法，使用 <code>GitHub Action</code> 自动化流程。自己瞎折腾，<code>action</code> 老是出错，也不知道问题在哪，只能放弃。从流行程度上来说大致分为静态和动态两种 (当然还有许多种类)。</p>
+<p>动态：</p>
+<ol>
+<li>WordPress (名气最大，功能多，较臃肿)</li>
+<li>Typecho (国人开发，轻量化，纯粹)</li>
+<li>Ghost/Blogger/Typlog </li>
+</ol>
+<p>静态：</p>
+<ol>
+<li>Hexo (国内使用人数最多，主题多)</li>
+<li>Jekyll (GitHub 官方推荐)</li>
+<li>Hugo (速度快)  </li>
+</ol>
+<p>下表来源于互联网：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Wordpress</th>
+<th>Hugo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部署</td>
+<td>一般需要独立的服务器</td>
+<td>一般不需要服务器，直接部署到 CDN</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>因为是 PHP 开发的动态站，所以在性能上有瓶颈，可能需要做不少设置才能提高一些性能，但和 Hugo 的静态网站相比还是太差</td>
+<td>纯静态化的页面，理论上性能极高，可以不考虑性能问题</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>加载速度和 CDN 有很大的关系，也和服务器渲染网页的速度有关系，因为 Wordpress 是动态网站，需要动态渲染，所以速度也差一些</td>
+<td>已经生成好的网页，速度取决于 CDN 的速度了</td>
+</tr>
+<tr>
+<td>定制化</td>
+<td>生态已经很繁荣了，所以几乎你需要的任何东西都有插件可以满足</td>
+<td>插件少，如果想定制很多功能，那么需要你对 Hugo 有深入的了解</td>
+</tr>
+<tr>
+<td>后台管理</td>
+<td>本身就是 CMS 系统，可以在后台管理各种功能</td>
+<td>本身是个静态化工具，没有后台管理功能，很多设置都直接使用文本来配置，对非程序员不友好。但是目前也有相关的 CMS 系统，如 <a target="_blank" rel="noopener" href="https://forestry.io/">forestry</a>，配合 <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">gatsbyjs</a> 之类的技术可以开发出任何你想要的网站</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td>对 SEO 很友好</td>
+<td>需要一些定制才能提高 SEO</td>
+</tr>
+</tbody></table>
+<p>我的需求是简洁，纯粹，速度快，加上刚开始写不打算投入成本购买 VPS，自然选择搭建静态 blog 。选择 Hexo 的理由就是主题和使用者多，遇到麻烦能少头痛。</p>
+<h2 id="小白掉坑"><a href="#小白掉坑" class="headerlink" title="小白掉坑"></a>小白掉坑</h2><ol>
+<li>买域名，配置域名解析。</li>
+<li>在 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 开一个仓库，绑定并配置后推送上去。</li>
+<li>用 Markdown 写文章。通过 Git 推送到仓库后，网站自动更新发布上线！</li>
+<li>使用 <a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>/<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 等静态网站生成工具 DIY 主题。</li>
+</ol>
+<p>上述大致流程网上教程很多不再赘述，说下遇到的坑。「esayhexo」的非官方教程不是很推荐，教程没提配置 SSH Key 导致安装时一系列报错，一个个按图索骥解决，累！GitHub 被伟大防火墙 (GFW) 严重干扰，在线 clone 主题的速度很忧伤，每秒 6kb… 还是 release 找文件 down 到 theme 文件夹才是佳选😉 终于成功安装 <strong>git</strong> 和 <strong>node.js</strong> 。输入指令推荐用 git 而不是 Windows Power Shall (傻愣愣)。</p>
+<p>GitHub 仓库无需 fork 别人仓库，新建即可。把名字改成 xxx.github.io (<strong>仓库名须和用户名一致</strong>) 。域名在 <code>page settings</code> 里手动输入，GitHub 还提供免费的证书😎</p>
+<p>需注意有些域名解析后才能使用，国内备案网站必须解析，我添加了 A 记录和 CNMAE 搞定。若要去掉 <code>www</code> 二级域名。在域名管理进行 DNS 解析，添加 A 记录<strong>重定向</strong>到域名 (能加两条就全加)。换句话说 A 记录就是 GitHub 仓库的 IP 地址，cmd 命令：ping + xxx.github.io 搞定。</p>
+<h2 id="捣鼓主题"><a href="#捣鼓主题" class="headerlink" title="捣鼓主题"></a>捣鼓主题</h2><p>安装主题后终于初步成功了！接下来各种优化和自定义。第一个 chic 主题玩了没两天就发现挺多 bug 的，前期还能折腾换了个主题。看用户最多的 NexT 已经审美疲劳，适合纯文字写作，不适合闷骚的我。</p>
+<p>在 melody (同时也是 Picgo 作者) 和卡片式主题 Material X 中抉择，看文档发现 Material X 不支持最新的 Hexo  4.2 ，遂放弃。动手前看清楚配置和条件很重要。melody 主题采用「平滑」升级。创建 <code>melody.yml</code>, 替换主题默认配置文件 <code>_config.yml</code> 。melody 文档详细易上手，修改了：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 网站图标 logo 更新</li>
+<li><input checked="" disabled="" type="checkbox"> 个人 logo 制作</li>
+<li><input checked="" disabled="" type="checkbox"> 字数统计方式修改</li>
+<li><input checked="" disabled="" type="checkbox"> footer 版权信息更新</li>
+<li><input checked="" disabled="" type="checkbox"> 主题颜色 DIY</li>
+</ul>
+<p>修改底部「网站运行时间」栽跟头，试了无数方法后发现不同主题作者编写语言不一样，要把 <code>html</code>「翻译」成  <code>pug</code> 语言，最终替换成功~ 不会编程语言就是那么无助…… 自己钻研虽浪费时间，但能获得无可比拟的乐趣。写了几篇文章后，Hexo-clean, Hexo-g (generate), Hexo-s (server), Hexo-d (deploy) 用的很熟练。</p>
+<p>希望产出有价值的内容。</p>
+<p>P.S. 感谢 <a target="_blank" rel="noopener" href="https://tingtalk.me/">Tim</a> 很耐心的用 TeamViewer 帮我远程协助！</p>
+<p>Edited: 2020-03-12 22:40</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/skill/">skill</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/bike">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">单车梦 (上)</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/legal-rights">
+                        <span class="hidden-mobile">法律维权之开庭记</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Why Not Have Blog?&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

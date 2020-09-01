@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>走出车祸 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-03-09 23:20" pubdate>
+      March 9, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">走出车祸</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>没想到车祸经历都能写成篇文章，纪念那些惨痛的往事，庆幸我还能继续向前。</p>
+<p>车祸猛于虎，出门在外，安全第一。最容易出事的是交通事故。根据 WHO 报告，中国每年有高达 26万 人丧命于交通事故 <strong>R.I.P</strong></p>
+<p>本人经历过大大小小事故多达 6 次。</p>
+<h2 id="First-blood"><a href="#First-blood" class="headerlink" title="First blood"></a>First blood</h2><p>十几岁时骑着山地车，那时有个暗恋对象，年少懵懂，强烈的荷尔蒙驱使着我飞快的踩踏，想早一点回家。和一辆载人的电瓶车迎面相撞，膝盖受伤。对方在路边买了瓶消毒药水后就急忙走了。我没有和家长声张 (怕责怪)，第二天还去打球，膝盖的伤病没养好至今伴随着我。</p>
+<h2 id="被坑"><a href="#被坑" class="headerlink" title="被坑"></a>被坑</h2><p>开始骑公路车，有次独自骑车上山，走一条新路。虽然看到施工牌，也询问了施工工人，得到答复是可以走，我就下山了。没曾想到，这可害惨了我，下坡正爽，过弯后就是一个大坑，路面是挖开的！摔得血肉模糊，最后求助一位大叔，用三轮车载我下山。</p>
+<p><img src="https://i.imgur.com/9hlD8yo.jpg" srcset="/img/loading.gif"></p>
+<h2 id="这都行？"><a href="#这都行？" class="headerlink" title="这都行？"></a>这都行？</h2><p>说来搞笑。日本旅游回来，带东西给女同学，约在离地铁站 2km 的地方。骑小黄车赴约 (怕迟到)，小黄车况不佳加上过于大意，骑过一个凸起的井盖，膝盖在地面摩擦，扑街…… 女同学陪我去医院…… 然而也没有什么后续😂</p>
+<h2 id="翻车老司机"><a href="#翻车老司机" class="headerlink" title="翻车老司机"></a>翻车老司机</h2><p>上述事故的时间跨度以年为单位。正所谓常在河边走，哪有不湿鞋，2019 年开始了我的高频翻车史…… </p>
+<h3 id="接连不断"><a href="#接连不断" class="headerlink" title="接连不断"></a>接连不断</h3><p>在杭州市区，有且只有一个爬坡圣地——龙井。坡短而陡，一个三月份的周末，天气晴朗，阳光透过树叶恰到好处的洒在地上，正是骑车的好天气。龙井的游客也多，爬一次是不够的，骑30多公里来龙井至少要爬四趟。就在第二次下坡时，从一辆滴滴车侧边过去，谁知电车突然朝我方向启动，本能的避让，右边是排水沟，轮组卡进去，翻车。躺在地上许久，(受伤后没一骨碌爬起来，可能造成二次损害) 谁知肇事车居然逃之夭夭，路人帮我拍下车牌，我决定报案 (机智了)，活动了下，还能骑，来到「交通警察支队」。这是内部单位，不能受理事故，里面的警察帮忙联系他同事，就在不远处的「交警支队」。</p>
+<p>来到支队，民警看监控后，判定汽车打方向导致「非接触性」事故，但是龙井有<strong>限制令</strong>——不允许骑车下坡 (可以骑车上山，只许推车下山) 所以我是<strong>主责</strong>。那个滴滴司机跑到了绍兴 (居然不算逃逸……)，我在支队等到晚上。</p>
+<p>事故处理完后，就是走保险，定损，理赔。公路自行车定损要去车店，我离车店又非常远，折腾多次，身心俱疲。历时一个多月，总算是结束。</p>
+<p>P.S. 现在想想，心放宽，时间久点都能解决。</p>
+<p>四月，骑车过一个大坑，人没事，轮组报废，损失 4000元🙃 后来在龙井练车，潮湿地面侧滑，摔破一条裤子…… 深夜找地方买裤子也是一次难忘 (悲伤) 的经历。</p>
+<h2 id="莫逆行"><a href="#莫逆行" class="headerlink" title="莫逆行"></a>莫逆行</h2><p>时隔两个月，来到五月份。参加完千岛湖骑游，骑车热情愈发高涨。一天傍晚，前往龙井进入市区，非机动车道有障碍。我逆行通过和骑电瓶车女子迎面撞个正着！老远看到她，大喊一声，但是就像导弹精准打击，我又双叒叕的飞出去…… 第一次躺<strong>救护车</strong>去医院，所幸是皮外伤。</p>
+<p>此次逆向，我全责，虽然有非机动车道事故五五开的例子，但是我接受交警的判定。</p>
+<h2 id="龙井之殇"><a href="#龙井之殇" class="headerlink" title="龙井之殇"></a>龙井之殇</h2><p>上半年过去来到十月下旬。从上海 F1 比赛回来后，愈发想要提升实力 (每次在渐入佳境时……) 在  weekday 的清早，出发去龙井，下坡安然无恙。在西湖景区过马路时被车撞！</p>
+<p>分析：</p>
+<ol>
+<li>没有严格走「L」型过马路</li>
+<li>早高峰车流太多，影响判断</li>
+<li>速度过快</li>
+</ol>
+<p>前所未有的惨重损失：脑震荡，门牙断大半颗 ，下颌有条 2cm 长的永久疤痕 (毁容👻)。处理事故民警是第一次龙井事故那位！绝了，没想到那位民警还记得我。</p>
+<p>直到今天，坏死的门牙还待种植。精神上的伤害挺大的，脑震荡里的几天，情绪很不稳定，有一种失忆的恐惧感。有点恐惧骑车，现在偶尔会头疼。</p>
+<p>但我没有放弃这项运动，身体上的疼痛和心理上的创伤都可以慢慢愈合，看自己想不想走出来，变强。虽然我从历史教训中唯一学到的就是没有吸取任何教训。但是我的心态，对安全认识已经提升了很多。</p>
+<hr>
+<p>就在昨日，我的一位善良，热心肠的家人。开车不谨慎运气也不好，在斑马线上撞到「鬼探头」的老太，老太在抢救无效后去世。</p>
+<p>对方家属指着喊道：你就是杀人凶手！不会原谅！你一定要去坐牢！我听了心里都起疙瘩，人死不能复生，这场车祸对于两个家庭来说都是不幸的。</p>
+<p>行车须小心，小心再小心，不能着急赶路和开斗气车。</p>
+<p>愿每个人都能从伤痛里走出来。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/bike/">bike</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/mobile-phone">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">那些年玩过的手机</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/network">
+                        <span class="hidden-mobile">网络工程改造记</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "走出车祸&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
