@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="le">
   <meta name="keywords" content="">
-  <title>Tags - life - Battle Le</title>
+  <title>Categories - course - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -44,7 +44,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -168,37 +168,31 @@
                 
 
 <div class="list-group">
-  <p class="h4">4 posts in total.</p>
+  <p class="h4">11 posts in total.</p>
   <hr>
   
     
       
       <p class="h5">2020</p>
     
-    <a href="/big-house/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">云顶别墅做客记</span>
-      <time style="float: right;">09-03</time>
-    </a>
-  
-    
-    <a href="/renting/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">租房的那些事（押金纠纷）</span>
-      <time style="float: right;">09-02</time>
-    </a>
-  
-    
-    <a href="/accident/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">走出车祸</span>
-      <time style="float: right;">03-09</time>
-    </a>
-  
-    
-    <a href="/freedom/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">I WANT TO SAY</span>
-      <time style="float: right;">03-02</time>
+    <a href="/rights-protection/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">法律维权之开庭记</span>
+      <time style="float: right;">02-11</time>
     </a>
   
 </div>
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/categories/course/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/categories/course/">1</a><span class="page-number current">2</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -291,7 +285,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Tag - life&nbsp;",
+        "Category - course&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
