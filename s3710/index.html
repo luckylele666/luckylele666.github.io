@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="le">
   <meta name="keywords" content="">
-  <title>Why Not Have Blog? - Battle Le</title>
+  <title>不折腾会死之 SSD S3710 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -161,8 +161,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-02-17 23:10" pubdate>
-      February 17, 2020 pm
+    <time datetime="2021-02-06 21:30" pubdate>
+      February 6, 2021 pm
     </time>
   </div>
 
@@ -172,7 +172,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.3k 字
     </span>
   
 
@@ -203,94 +203,115 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">Why Not Have Blog?</h1>
+            <h1 style="display: none">不折腾会死之 SSD S3710</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：September 3, 2020 am
+                  本文最后更新于：February 6, 2021 pm
                 
               </p>
             
             <div class="markdown-body" id="post-body">
-              <p>已经 2020 年，为啥要搭建一个自己的 Blog？原因很简单，想有个自己的 Internet Archives ，什么时候想到了就写一点。不用登录，没有那么多审查，排版随心所欲，主题也可以自己 DIY。自己集作者，编辑和出版社的功能于一体，想想都很棒😋</p>
-<p>漫漫假期，有的是时间,，Just Do It! 开始建造自己的 kingdom。</p>
-<h2 id="Domain-Name"><a href="#Domain-Name" class="headerlink" title="Domain Name"></a>Domain Name</h2><p>先在 Namesilo 买<strong>域名</strong>。常用的 com, net, org 都已注册，又探索了 me, io 这类「潮流」域名，花了两天。终于想出个满意的名字「Battlele」。本着时时刻刻对世界充满期待和挑战的心态，充满活力的去战斗！「battle」 和 「le」放在一起，简短有力。</p>
-<h2 id="Blog-选择"><a href="#Blog-选择" class="headerlink" title="Blog 选择"></a>Blog 选择</h2><p>起初找了个无需本地化部署和生成的方法，使用 <code>GitHub Action</code> 自动化流程。自己瞎折腾，<code>action</code> 老是出错，也不知道问题在哪，只能放弃。从流行程度上来说大致分为静态和动态两种 (当然还有许多种类)。</p>
-<p>动态：</p>
-<ol>
-<li>WordPress (名气最大，功能多，较臃肿)</li>
-<li>Typecho (国人开发，轻量化，纯粹)</li>
-<li>Ghost/Blogger/Typlog </li>
-</ol>
-<p>静态：</p>
-<ol>
-<li>Hexo (国内使用人数最多，主题多)</li>
-<li>Jekyll (GitHub 官方推荐)</li>
-<li>Hugo (速度快)  </li>
-</ol>
-<p>下表来源于互联网：</p>
-<table>
-<thead>
-<tr>
-<th>维度</th>
-<th>Wordpress</th>
-<th>Hugo</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>部署</td>
-<td>一般需要独立的服务器</td>
-<td>一般不需要服务器，直接部署到 CDN</td>
-</tr>
-<tr>
-<td>性能</td>
-<td>因为是 PHP 开发的动态站，所以在性能上有瓶颈，可能需要做不少设置才能提高一些性能，但和 Hugo 的静态网站相比还是太差</td>
-<td>纯静态化的页面，理论上性能极高，可以不考虑性能问题</td>
-</tr>
-<tr>
-<td>速度</td>
-<td>加载速度和 CDN 有很大的关系，也和服务器渲染网页的速度有关系，因为 Wordpress 是动态网站，需要动态渲染，所以速度也差一些</td>
-<td>已经生成好的网页，速度取决于 CDN 的速度了</td>
-</tr>
-<tr>
-<td>定制化</td>
-<td>生态已经很繁荣了，所以几乎你需要的任何东西都有插件可以满足</td>
-<td>插件少，如果想定制很多功能，那么需要你对 Hugo 有深入的了解</td>
-</tr>
-<tr>
-<td>后台管理</td>
-<td>本身就是 CMS 系统，可以在后台管理各种功能</td>
-<td>本身是个静态化工具，没有后台管理功能，很多设置都直接使用文本来配置，对非程序员不友好。但是目前也有相关的 CMS 系统，如 <a target="_blank" rel="noopener" href="https://forestry.io/">forestry</a>，配合 <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">gatsbyjs</a> 之类的技术可以开发出任何你想要的网站</td>
-</tr>
-<tr>
-<td>SEO</td>
-<td>对 SEO 很友好</td>
-<td>需要一些定制才能提高 SEO</td>
-</tr>
-</tbody></table>
-<p>我的需求是简洁，纯粹，速度快，加上刚开始写不打算投入成本购买 VPS，自然选择搭建静态 blog 。选择 Hexo 的理由就是主题和使用者多，遇到麻烦能少头痛。</p>
-<h2 id="小白掉坑"><a href="#小白掉坑" class="headerlink" title="小白掉坑"></a>小白掉坑</h2><ol>
-<li>买域名，配置域名解析。</li>
-<li>在 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 开一个仓库，绑定并配置后推送上去。</li>
-<li>用 Markdown 写文章。通过 Git 推送到仓库后，网站自动更新发布上线！</li>
-<li>使用 <a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>/<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 等静态网站生成工具 DIY 主题。</li>
-</ol>
-<p>上述大致流程网上教程很多不再赘述，说下遇到的坑。「esayhexo」的非官方教程不是很推荐，教程没提配置 SSH Key 导致安装时一系列报错，一个个按图索骥解决，累！GitHub 被伟大防火墙 (GFW) 严重干扰，在线 clone 主题的速度很忧伤，每秒 6kb… 还是 release 找文件 down 到 theme 文件夹才是佳选😉 终于成功安装 <strong>git</strong> 和 <strong>node.js</strong> 。输入指令推荐用 git 而不是 Windows Power Shall (傻愣愣)。</p>
-<p>GitHub 仓库无需 fork 别人仓库，新建即可。把名字改成 xxx.github.io (<strong>仓库名须和用户名一致</strong>) 。域名在 <code>page settings</code> 里手动输入，GitHub 还提供免费的证书😎</p>
-<p>需注意有些域名解析后才能使用，国内备案网站必须解析，我添加了 A 记录和 CNMAE 搞定。若要去掉 <code>www</code> 二级域名。在域名管理进行 DNS 解析，添加 A 记录<strong>重定向</strong>到域名 (能加两条就全加)。换句话说 A 记录就是 GitHub 仓库的 IP 地址，cmd 命令：ping + xxx.github.io 搞定。</p>
-<h2 id="捣鼓主题"><a href="#捣鼓主题" class="headerlink" title="捣鼓主题"></a>捣鼓主题</h2><p>安装主题后终于初步成功了！接下来各种优化和自定义。第一个 chic 主题玩了没两天就发现挺多 bug 的，前期还能折腾换了个主题。看用户最多的 NexT 已经审美疲劳，适合纯文字写作，不适合闷骚的我。</p>
-<p>在 melody (同时也是 Picgo 作者) 和卡片式主题 Material X 中抉择，看文档发现 Material X 不支持最新的 Hexo  4.2 ，遂放弃。动手前看清楚配置和条件很重要。melody 主题采用「平滑」升级。创建 <code>melody.yml</code>, 替换主题默认配置文件 <code>_config.yml</code> 。melody 文档详细易上手，修改了：</p>
+              <p>自从上次试水<a href="https://battlele.com/pssd/">三星 T7</a> 后对于 SSD（Portable SSD）有些望而却步，但也持续关注着。我对于速度的要求降低为能 500 MB/s 全盘写入不掉速即可，终于找到一块符合要求的 SSD——Intel DC S3710 400 GB。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这是一款 2015 年诞生的 MLC 颗粒固态硬盘，DC（数据中心）使用，稳定是最大的特点。官方顺序读取速度为 550 MB/s，顺序写入速度为 470 MB/s，2.5” 7 mm 的尺寸，SATA 6Gb/s 接口。最为厉害的是支持每天 10 次全盘擦写，连续擦写 5 年，24.3 PB 的寿命预期，所以被称为 SATA 接口的固态之王，200 GB 版本性能缩水。</p>
+<h3 id="购买须知"><a href="#购买须知" class="headerlink" title="购买须知"></a>购买须知</h3><p>一直在某宝观望，价格从 ￥650 一直下降到 ￥560，但是网上说大船货（流出来的企业级 SSD）翻船，市面上所谓的零通电盘可通过技术手段归零，实际已经通电数千小时，有数 TB 的数据写入量。但是我架不住真香的价格和再不买就没了的错觉（等不住了），盘他！商家写着是上海发货，实际同城快递隔日达，￥599 顺丰到付。这块是联想 OEM 版本，似乎打着全新旗号的都是联想版本。</p>
+<h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><p>先上图：</p>
+<p><img src="https://i.imgur.com/OJqvkgq.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>防静电包装，胶袋上还有字迹</p>
+</blockquote>
+<p><img src="https://i.imgur.com/XwSmyf7.jpg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/HMIp0r3.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>颜值还是不错的</p>
+</blockquote>
+<p><img src="https://i.imgur.com/25ok3BH.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>背面相当惨不忍睹，据说都是这样</p>
+</blockquote>
+<p><img src="https://i.imgur.com/B3YW8lb.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>仔细看螺丝孔位有许多细划痕，开始心里打鼓</p>
+</blockquote>
+<p><img src="https://i.imgur.com/CfwKITL.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>基维.斯老司机说金手指根部发暗，被处理过</p>
+</blockquote>
+<h2 id="硬盘盒"><a href="#硬盘盒" class="headerlink" title="硬盘盒"></a>硬盘盒</h2><p>硬盘盒子还没到，手痒痒还不能上机测试。科普下硬盘盒和主控芯片的门道，可以看下这篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/58257546">科普文章</a>，作者 Leaves 写的非常详细，贴下他制作的图：</p>
+<p><img src="https://i.imgur.com/1E2OLSp.png" srcset="/img/loading.gif"></p>
+<p>由此可以看出，当今（截止 2021.01）最好的主控芯片是 <strong>ASM235CM</strong>，比起 <strong>VL716</strong> 更可靠，当然价格也贵。我朋友推荐的佳翼黑鹰 7 用的是 VL716，他用着还不错，可驾驭 S3710，看预算选择芯片吧。当然装载相同芯片的硬盘盒还要挑：</p>
 <ul>
-<li><input checked="" disabled="" type="checkbox"> 网站图标 logo 更新</li>
-<li><input checked="" disabled="" type="checkbox"> 个人 logo 制作</li>
-<li><input checked="" disabled="" type="checkbox"> 字数统计方式修改</li>
-<li><input checked="" disabled="" type="checkbox"> footer 版权信息更新</li>
-<li><input checked="" disabled="" type="checkbox"> 主题颜色 DIY</li>
+<li>材质（金属佳）</li>
+<li>协议&amp;接口（是否支持 Type-C）</li>
+<li>设计（滑盖/螺丝固定，后者稳当）</li>
+<li>功能 （有无 Trim，休眠功能）</li>
+<li>品牌（品控，售后）</li>
+<li>外观（厚薄，对看中颜值的我来说很重要）</li>
+<li>是否有供电（后面会提到）</li>
 </ul>
-<p>修改底部「网站运行时间」栽跟头，试了无数方法后发现不同主题作者编写语言不一样，要把 <code>html</code>「翻译」成  <code>pug</code> 语言，最终替换成功~ 不会编程语言就是那么无助…… 自己钻研虽浪费时间，但能获得无可比拟的乐趣。写了几篇文章后，Hexo-clean, Hexo-g (generate), Hexo-s (server), Hexo-d (deploy) 用的很熟练。</p>
-<p>希望产出有价值的内容。</p>
-<p>P.S. 感谢 <a target="_blank" rel="noopener" href="https://tingtalk.me/">Tim</a> 很耐心的用 TeamViewer 帮我远程协助！</p>
-<p>Edited: 2020-03-12 22:40</p>
+<p>基于上述指标，我看中了三款，有最早进我购物车的佳翼黑鹰 7，绿联某未命名盒子以及从未听说过的优越者。为什么没有选黑鹰，芯片不够顶级，绿联的外观不讨好，底部有累赘的防滑胶垫，大量的评价不佳，价格也比较高，最终我选择了优越者。</p>
+<p><img src="https://i.imgur.com/ZebmA0l.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>笑脸结构其实是塑料</p>
+</blockquote>
+<p><img src="https://i.imgur.com/ScNg8OC.jpg" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>滑盖用久了肯定会出问题，还是拧螺丝的好，一个优点：比较轻</p>
+</blockquote>
+<p><img src="https://i.imgur.com/nDOLy1K.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>不完全插进去其实是对 USB 3.0 线材的兼容设计，配了两根线，USB-A to C, USB-C to C</p>
+</blockquote>
+<p>短时间上手，滑盖设计很不好，7 mm 的厚度太薄了，放在盒子里会滑动。燃鹅（我没有打错别字）我期待已久的盒子很不给面子，点不亮！反复折腾，格式化都不行。可能 S3710 电老虎需要独立供电，大概率是盒子问题，佳翼黑鹰 7 无电源也带的动，不要尝鲜买小品牌啊！一怒之下又买了根绿联的 SATA 易驱线（这根线质量不错，用不着也没退货），终于可以测试。</p>
+<h2 id="实测"><a href="#实测" class="headerlink" title="实测"></a>实测</h2><p>先给 PC 上的东芝 SSD 测，结果也不甚满意，写入速度的瓶颈不知道卡在哪里。不过 S3710 走不同的 PCIe 通道不受影响。</p>
+<p><img src="https://i.imgur.com/tsVJdX7.png" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/PQYZg2a.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>照妖镜，通电次数有 51 次，还说是零通电盘？！</p>
+</blockquote>
+<p><img src="https://i.imgur.com/Zzuhnll.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>这速度勉强合格吧</p>
+</blockquote>
+<p><img src="https://i.imgur.com/H7SbqJH.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>持续拷打，不尽如意</p>
+</blockquote>
+<p><img src="https://i.imgur.com/QQOgx8Q.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>这个俺也不太懂</p>
+</blockquote>
+<p><img src="https://i.imgur.com/qij7m46.png" srcset="/img/loading.gif"></p>
+<blockquote>
+<p>移动又碎又小的文件时简直不能看……</p>
+</blockquote>
+<h2 id="翻车"><a href="#翻车" class="headerlink" title="翻车"></a>翻车</h2><p>这次翻车不是偶然的：</p>
+<ol>
+<li>可能是主机配置不高，接口应该不差（两个满血雷电 3，一个 USB 3.1 Gen 1）</li>
+<li>这么低的价格不正常，全新盒装 S3710 400 GB 卖 ￥1500，虽然有可能存在全新盘（轮不到我）</li>
+</ol>
+<p>之后打算：买块<strong>西部数据 P50</strong>，希捷 FireCuda Gaming SSD 一步到位，不折腾。或者淘块靠谱的 S3710 + <strong>VL717</strong> 主控芯片（支持 PD 电源）</p>
+<p>亦或者是不折腾了，靠 Google Drive + iCloud + Dropbox 来拯救我！</p>
+<hr>
+<p>网上看到的 SSD 排名，分享一下：</p>
+<blockquote>
+<p> M.2 NVMe SSD，按寿命稳定性排序：</p>
+<p> SM961 = 960 Pro &gt; XG3 &gt; PM981a &gt; PM981 &gt; XG5 ≥ PM961 &gt; N750 &gt; N720 &gt; 760P &gt; 600P</p>
+<p> SATA SSD，按寿命稳定性排序：</p>
+<p> S3710 = SM865a &gt; 5200MAX &gt; S3610 = SM863a &gt; S4610 &gt; S3520 &gt; S3510 &gt; S3500 &gt; S4510 &gt; S4500</p>
+<p> M.2 SATA/NGFF SSD，按寿命稳定性排序：</p>
+<p> S3520 &gt; S3500 &gt; SN210 &gt; 1100 &gt; PM871 = 540S</p>
+<p> <strong>The survival MLC SSD</strong></p>
+<p> Intel:</p>
+<p> S3710 | S3610 | S3520 | S3510 | S3500</p>
+<p> P3700 | P3600 | P3605 | P3608 | P3520</p>
+<p> S3520 | S3500</p>
+<p> Samsung:</p>
+<p> SM865a | SM863a | 850 Pro</p>
+<p> 960 Pro | SM961 | SM951 | SM963</p>
+<p> Micron 镁光：<br> MD500DC | MD510DC | M600</p>
+</blockquote>
+<p>P.S. 我可是观望了 S3710 大半年才下定决心买的，呜呼！</p>
 
             </div>
             <hr>
@@ -308,7 +329,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/blog/">blog</a>
+                      <a class="hover-with-bg" href="/tags/device/">device</a>
                     
                   </div>
                 
@@ -321,18 +342,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Why Not Have Blog?</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/rights-protection/">
-                        <span class="hidden-mobile">法律维权之开庭记</span>
+                      <a href="/xian/">
+                        <span class="hidden-mobile">年末访古都</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -351,8 +366,8 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://battlele.com/blog/';
-        this.page.identifier = '/blog/';
+        this.page.url = 'http://battlele.com/s3710/';
+        this.page.identifier = '/s3710/';
       };
       function loadDisqus() {
         (function () {
@@ -501,7 +516,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Why Not Have Blog?&nbsp;",
+        "不折腾会死之 SSD S3710&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
