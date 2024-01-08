@@ -421,9 +421,9 @@
     
     <category term="geek" scheme="http://battlele.com/tags/geek/"/>
     
-    <category term="ssd" scheme="http://battlele.com/tags/ssd/"/>
-    
     <category term="skill" scheme="http://battlele.com/tags/skill/"/>
+    
+    <category term="ssd" scheme="http://battlele.com/tags/ssd/"/>
     
   </entry>
   
@@ -473,9 +473,9 @@
     <category term="course" scheme="http://battlele.com/categories/course/"/>
     
     
-    <category term="geek" scheme="http://battlele.com/tags/geek/"/>
-    
     <category term="experience" scheme="http://battlele.com/tags/experience/"/>
+    
+    <category term="geek" scheme="http://battlele.com/tags/geek/"/>
     
   </entry>
   
