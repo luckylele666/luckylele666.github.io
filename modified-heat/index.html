@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Lucky">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="最近使用 PC 时风扇转速飙升厉害，发烫现象严重，寻思着用了两年多，散热硅脂减少造成的。先问了官方售后换一次散热硅脂几多钱，答复是**日本信越 7921** 的散热硅脂 120 元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XPS 拆机换硅脂">
+<meta property="og:url" content="http://battlele.com/modified-heat/index.html">
+<meta property="og:site_name" content="Battle Le 博客">
+<meta property="og:description" content="最近使用 PC 时风扇转速飙升厉害，发烫现象严重，寻思着用了两年多，散热硅脂减少造成的。先问了官方售后换一次散热硅脂几多钱，答复是**日本信越 7921** 的散热硅脂 120 元">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/kn3SFZq.jpg">
+<meta property="article:published_time" content="2020-09-16T12:50:00.000Z">
+<meta property="article:modified_time" content="2020-09-25T11:51:52.000Z">
+<meta property="article:author" content="Lucky">
+<meta property="article:tag" content="device">
+<meta property="article:tag" content="geek">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/kn3SFZq.jpg">
+  
+  
+  
+  <title>XPS 拆机换硅脂 - Battle Le 博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"tajs":null},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-161026029-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Battle Le 博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Battle Le</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="XPS 拆机换硅脂"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-09-16 20:50" pubdate>
+          September 16, 2020 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          1.3k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">XPS 拆机换硅脂</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：September 25, 2020 pm
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>最近使用 PC 时风扇转速飙升厉害，发烫现象严重，寻思着用了两年多，散热硅脂减少造成的。先问了官方售后换一次散热硅脂几多钱，答复是<strong>日本信越 7921</strong> 的散热硅脂 120 元，虽然是十年前的产品，放在现在还够用，是不是硅脂技术发展到头了。淘宝上一千克的售价是￥4800，那么每克售价是 4.8 元，所以￥120 纯粹贵的是手工费。网上有人说 Dell 的工程师在拆机时把模具卡扣掰断，技术也不咋滴……貌似拆机不难，那我就自己动手，买了 3 克装只要￥19.8 还送小工具。动手前先 Google 了「XPS service manual」找到对应型号的 <a target="_blank" rel="noopener" href="https://topics-cdn.dell.com/pdf/xps-13-9370-laptop_service-manual_zh-cn.pdf">服务手册</a>，有图文并茂的教程，这也是成品机型的好处。</p>
+<p>准备工具：</p>
+<ol>
+<li>信越 7921 散热硅脂</li>
+<li>各种型号螺丝刀</li>
+<li>垫片</li>
+<li>酒精片</li>
+<li>毛巾</li>
+</ol>
+<h2 id="拆机盖"><a href="#拆机盖" class="headerlink" title="拆机盖"></a>拆机盖</h2><p><img src="https://i.imgur.com/iVCV4lJ.jpg" srcset="/img/loading.gif" lazyload alt="拆机盖"></p>
+<p>垫好毛巾，以免刮伤。第一步是最难的，要拆开基座护盖。得从中部挖出一道缝，用垫片塞进去，然后往两边划，但是不能太用力，我就因为经验不足在接口处把一块塑料翘断，还破坏了扬声器上的镀膜。不应该一个劲的划，而是慢慢的的顶，使卡扣分离，总之大力出悲剧！</p>
+<p><img src="https://i.imgur.com/kn3SFZq.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>打开之后一块裸露的主板就出现在我眼前，不亏是 XPS，整合度很高，虽然我也没拆过别的什么机型，但是设计巧妙，排布合理，就像打开汽车引擎盖里面平整简洁的那种感觉。</p>
+<h2 id="拆电池"><a href="#拆电池" class="headerlink" title="拆电池"></a>拆电池</h2><p>开盖后无论什么操作（除非只是打开盖子来看一看）都要先断开电源，以免受伤（说的是机器）。在电源排线两端用指甲扣住一推就开（研究了好久），拧下四颗（M2x2）以及一颗（M1.6x4）螺钉。电池上面写着螺丝规格，好评。然而我的螺丝刀并不是这么命名的，好久才找到适合的螺丝刀。科普一下：十字型螺丝 Phillips 是由 Henry.Phillips 在二十世纪三十年代发明。卸下电池后按住电源键十秒把残留电流放光。</p>
+<p>电池做的非常薄，才能塞进这薄薄的机身，52 Wh 电池由四块小电池组成。用了两年轻度使用续航有 6 小时。</p>
+<h2 id="拆风扇"><a href="#拆风扇" class="headerlink" title="拆风扇"></a>拆风扇</h2><p><img src="https://i.imgur.com/x1tP2jU.jpg" srcset="/img/loading.gif" lazyload alt="卸下风扇"></p>
+<p>拧下固定无线天线和摄像头电线的螺钉（M1.6x3），把金属盖片的排线接口断开</p>
+<p><img src="https://i.imgur.com/KIwrIOl.jpg" srcset="/img/loading.gif" lazyload alt="卸下风扇 2"></p>
+<p>接着把风扇的两个排线断开，再把固定风扇的两颗螺钉（M1.6x3）拧下</p>
+<h2 id="拆散热器"><a href="#拆散热器" class="headerlink" title="拆散热器"></a>拆散热器</h2><p>最后就是拧下散热器的四颗螺钉（M2x3），在黑色的散热器上用数字写着对角线拧螺丝的顺序，再次好评。</p>
+<p><img src="https://i.imgur.com/iMvbD1H.jpg" srcset="/img/loading.gif" lazyload alt="拆散热器打 "></p>
+<p>这里的 M2x3 螺丝和 D 面的一样，只是后者是 Torx 梅花形状，前者是十字的，然而工具不够好，滑丝了！没办法只好用一字型螺丝刀强行拧开。拿开散热器就能清理风扇背面，居然没有什么灰尘，挺干净。</p>
+<p><img src="https://i.imgur.com/AKWm9MZ.jpeg" srcset="/img/loading.gif" lazyload alt="散热铜片"></p>
+<p><img src="https://i.imgur.com/upGsYsO.jpeg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>前后对比</p>
+</blockquote>
+<p>把铜片上和芯片上的硅脂刮干净，用酒精片擦拭，待干之后拿出等待已久的 7921 硅脂，在芯片上画了个 ×，直接把铜片盖回去，真男人从不回头😎 </p>
+<p><img src="https://i.imgur.com/H6YED9k.jpg" srcset="/img/loading.gif" lazyload alt="抹散热硅脂"></p>
+<blockquote>
+<p>3 克硅脂能用好几回！</p>
+</blockquote>
+<p>然后依次把螺丝拧回去，so easy。拧滑牙的螺丝用机盖相同的 M2x3 代替。先<strong>点亮电源</strong>测试是否能开机，简单测试后无问题再装回盖板。这个盖板，拆也困难，装回去也困难。装了三回都没成功，要先对齐螺丝孔，把螺丝拧一点行程，再盖上排气部分（D 面上端）的卡扣，这部很关键否则盖不上。盖上后边拧螺丝边压紧盖板卡扣，大功告成。别看这么简单的操作，也花了我一个下午的时间，工具不顺手是最大障碍。</p>
+<p>技术总结：</p>
+<ol>
+<li>需要一套好工具！</li>
+<li>需要灯光照明良好的操作环境</li>
+<li>需要耐心，做好弄坏设备的打算</li>
+</ol>
+<p>P.S. Dell 和 Apple 一样也是用的半角括号「()」。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/course/" class="category-chain-item">course</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/device/">#device</a>
+      
+        <a href="/tags/geek/">#geek</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>XPS 拆机换硅脂</div>
+      <div>http://battlele.com/modified-heat/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Lucky</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>September 16, 2020</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Updated on</div>
+          <div>September 25, 2020</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/PotatsoLite_matter/" title="解决 Potatao Lite 无法连接问题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解决 Potatao Lite 无法连接问题</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/shan-cheng/" title="山城掠影">
+                        <span class="hidden-mobile">山城掠影</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://t.me/battlele" target="_blank" rel="nofollow noopener"><span>Battle</span></a> <i class="iconfont icon-love"></i> <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Le</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

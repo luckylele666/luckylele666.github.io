@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Lucky">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="如何选择使用软件本文内容所述均是我觉得重度使用且需要介绍的软件，如 TG 这些就不赘述了。在哪安装正版和安全的软件呢？首选 HomeBrew，接着是 Mac App Store，再者是 GitHub dmg 开源下载。开源 + 轻量 + 原生是我选择软件的前提，下面开始介绍这些软件。 窗口管理在 Windows 10 上把窗口上顶实现最大化或者分屏，在 macOS 实现相同功能的软件挺多，Bett">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS 佳软及迁移设置合集">
+<meta property="og:url" content="http://battlele.com/macos-setup/index.html">
+<meta property="og:site_name" content="Battle Le 博客">
+<meta property="og:description" content="如何选择使用软件本文内容所述均是我觉得重度使用且需要介绍的软件，如 TG 这些就不赘述了。在哪安装正版和安全的软件呢？首选 HomeBrew，接着是 Mac App Store，再者是 GitHub dmg 开源下载。开源 + 轻量 + 原生是我选择软件的前提，下面开始介绍这些软件。 窗口管理在 Windows 10 上把窗口上顶实现最大化或者分屏，在 macOS 实现相同功能的软件挺多，Bett">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/tAXpcD8.jpg">
+<meta property="article:published_time" content="2022-05-01T08:35:00.000Z">
+<meta property="article:modified_time" content="2022-07-25T02:48:16.838Z">
+<meta property="article:author" content="Lucky">
+<meta property="article:tag" content="geek">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/tAXpcD8.jpg">
+  
+  
+  
+  <title>macOS 佳软及迁移设置合集 - Battle Le 博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"tajs":null},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-161026029-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Battle Le 博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Battle Le</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="macOS 佳软及迁移设置合集"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-05-01 16:35" pubdate>
+          May 1, 2022 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          4.3k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">macOS 佳软及迁移设置合集</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：July 25, 2022 am
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="如何选择使用软件"><a href="#如何选择使用软件" class="headerlink" title="如何选择使用软件"></a>如何选择使用软件</h2><p>本文内容所述均是我觉得重度使用且需要介绍的软件，如 TG 这些就不赘述了。在哪安装正版和安全的软件呢？首选 HomeBrew，接着是 Mac App Store，再者是 GitHub dmg 开源下载。开源 + 轻量 + 原生是我选择软件的前提，下面开始介绍这些软件。</p>
+<h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><p>在 Windows 10 上把窗口上顶实现最大化或者分屏，在 macOS 实现相同功能的软件挺多，Better Touch Tool 有内置窗口吸附功能，专门做这功能的有 Rectangle Pro、Spectacle，二者差不多，我更喜欢前者的 UI。</p>
+<p>Rectangle 免费版就够用，后来我选择效率应用——<strong>Raycast</strong>，里面直接集合了前面两者的快捷键。还支持剪贴板管理，可以取代 <a target="_blank" rel="noopener" href="https://github.com/p0deje/Maccy">Maccy</a>。算是 All In One 的「瑞士军刀」工具了。当然 Alfred 也很好，我更喜欢 Raycast 的 UI。</p>
+<h2 id="鼠标增强工具及触摸板设置"><a href="#鼠标增强工具及触摸板设置" class="headerlink" title="鼠标增强工具及触摸板设置"></a>鼠标增强工具及触摸板设置</h2><p>我用的是 <a href="https://battlele.com/mx2s-fix/">Logi Master 2S</a> 鼠标，需要用 Logi Options 驱动软件，这里吐槽下，只有新款罗技鼠标支持新 Logi Options+（老款有在跨平台无法使用 Flow 功能的 bug）。</p>
+<h3 id="系统设置-鼠标"><a href="#系统设置-鼠标" class="headerlink" title="系统设置-鼠标"></a>系统设置-鼠标</h3><p>鼠标滚动方向：自然</p>
+<p>触控板滚动方向：自然</p>
+<p>此两项选择只要开启&#x2F;关闭其中一个，另一个也会<strong>同时更改</strong>。而我需要的是<strong>反转鼠标滚动方向并且不会反转触控板滚动方向</strong>，针对这个问题我先尝试了 <a target="_blank" rel="noopener" href="https://www.smoothscroll.net/mac/">SmoothScroll</a>。</p>
+<p><img src="https://i.imgur.com/T6D1Zos.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>使用后发现某些情况下鼠标滚轮仍然会反转，也试过 <a target="_blank" rel="noopener" href="https://github.com/Caldis/Mos">Mos</a>，但是在 Firefox 下有用滚轮控制标签页太敏感以至于不能精准切换（会起飞）的问题。</p>
+<p>最后发现 LinearMouse 的方案是比较好的，关键是<strong>关闭线性加速</strong>，改变鼠标平滑度。</p>
+<p><img src="https://i.imgur.com/iFsTH52.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/38I8So2.png" srcset="/img/loading.gif" lazyload alt="这是我现在的设置"></p>
+<h3 id="触控板设置"><a href="#触控板设置" class="headerlink" title="触控板设置"></a>触控板设置</h3><p>把触控板滚动方向：自然打开。若要修改触摸板双指上下滚动的速度，在「系统偏好设置」-「<strong>辅助功能</strong>」里，在左侧菜单栏找到「指针控制」，进入「触摸板选项」，这里面设置的「滚动速度」才是触摸板上双指上下滚动的速度。</p>
+<p>进行上述繁杂的操作究其原因还是 macOS 这方面做得不好（多卖点妙控板？）办公鼠标的 <strong>DPI</strong> 太低，用起来有粘滞感，以后换个游戏鼠标。</p>
+<h2 id="触控板、手势增强软件"><a href="#触控板、手势增强软件" class="headerlink" title="触控板、手势增强软件"></a>触控板、手势增强软件</h2><p>首推 Better Touch Tool，老牌软件，功能足够丰富。分享下我的触控板设置：</p>
+<p><img src="https://i.imgur.com/BzlFdEC.png" srcset="/img/loading.gif" lazyload alt="其中第二和三切换标签页的设置太好用了"></p>
+<ol start="2">
+<li>PopClip（收费）在系统层面提供简洁流程，类手势的功能。官方描述：when you <strong>select text</strong> with your mouse on your Mac. Instantly copy &amp; paste, and access actions like search, spelling, dictionary and <a target="_blank" rel="noopener" href="https://pilotmoon.com/popclip/extensions/">over 200 more</a>.</li>
+</ol>
+<h2 id="代理工具"><a href="#代理工具" class="headerlink" title="代理工具"></a>代理工具</h2><p>免费的也只有 Clash X 了，我用的是 Clash X Pro（增强版）偶尔有后台闪退的 bug 已经算好用了，买过 Quantumult X 的也可以在 Mac 上试一下。强烈不推荐在 M1 Mac 上使用 Clash For Windows，资源占用 500%，一会儿就没电了…… </p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>内置 Safari 最大的优点就是省电，说真的其他都不好用。</p>
+<p>我最喜欢的 Firefox 除了不能倍速播放 YouTube 4K60p 视频，其余完美符合我的各种需求，比如：鼠标滚轮放在标签页上进行切换，设置如下：</p>
+<ol>
+<li>搜索栏里键入：about:config</li>
+<li>搜索 toolkit.tabbox.switchByScrolling</li>
+<li>True （开启）</li>
+</ol>
+<p>还有 Installing Certificates Into Firefox（解决 Quantumult X 开启 MitM 后无法访问 YouTube 等站点问题），方法：</p>
+<p>about:config - security.enterprise_roots.enabled，True （开启）即可完成，</p>
+<p>但是最近 Firefox 不争气，出了很多 bug，（诸如沙拉查词用快捷键打开会跳转到第二屏幕）严重到打开网页极慢。不得不忍受三个浏览器一起用，那就干脆：</p>
+<ol>
+<li>Firefox 主浏览器</li>
+<li>Safari 备用，用来购物和敏感操作</li>
+<li>Chrome 专门用来看视频（特别是 YouTube，毕竟是 Google 亲儿子）</li>
+</ol>
+<h2 id="邮件"><a href="#邮件" class="headerlink" title="邮件"></a>邮件</h2><ol>
+<li>Mail（默认，和 Safari 一样不那么好用）</li>
+<li>Mimestream（收邮件比 Spark 快，可是仅支持 Gmail）</li>
+<li>Spark（设置多样，可以自定义）</li>
+</ol>
+<h2 id="「刘海」管理"><a href="#「刘海」管理" class="headerlink" title="「刘海」管理"></a>「刘海」管理</h2><p>托新款 MacBook Pro 设计的福，有这么奇奇怪怪名字的工具😄，我是不介意刘海的，反正摄像头那里永远贴着黑胶布，有刘海大家不就知道这是新款 MacBook Pro 了吗，话虽如此还是推荐两个：</p>
+<ol>
+<li>TopNotch 隐藏刘海</li>
+<li>Notchmeister 鼠标划过刘海时候有特效</li>
+</ol>
+<p><img src="https://i.imgur.com/aUu2h90.png" srcset="/img/loading.gif" lazyload alt="官方效果图"></p>
+<ol start="3">
+<li>Bartender 4 也算是为刘海而生吧，<del>偷偷的说试用期结束后还能使用只是有弹窗提示购买</del></li>
+<li>Hidden Bar 和 Dozer 是前者的平替版</li>
+</ol>
+<h2 id="Podcast-客户端"><a href="#Podcast-客户端" class="headerlink" title="Podcast 客户端"></a>Podcast 客户端</h2><p><a href="https://battlele.com/geek/#6-Podcast">传统御三家</a>都没有上架 Mac App Store……</p>
+<ol>
+<li><p>Apple Podcast 祖师爷，可是功能太少，不能支持 1.2 倍速播放，以前订阅都在这里，随便打开听一听</p>
+</li>
+<li><p>Moon FM 界面比较好看</p>
+<h2 id="几个好玩的时钟屏保"><a href="#几个好玩的时钟屏保" class="headerlink" title="几个好玩的时钟屏保"></a>几个好玩的时钟屏保</h2></li>
+<li><p>Fliqlo（从 Windows 用过来的）</p>
+</li>
+<li><p>Padbury Clock （和 Fliqlo 不同，另一种风格）</p>
+</li>
+<li><p>Watch OSX（有趣的动态时钟屏保，主力在用）</p>
+</li>
+</ol>
+<h2 id="菜单栏状态显示"><a href="#菜单栏状态显示" class="headerlink" title="菜单栏状态显示"></a>菜单栏状态显示</h2><p>收费的有 iStat Menu 6 和 iStatistica 我觉得是前者美观、直观一点。</p>
+<p>免费的有 Stats、RunCat（很可爱）、eul ，选择一款自己喜欢的吧。</p>
+<h2 id="播放器"><a href="#播放器" class="headerlink" title="播放器"></a>播放器</h2><p>很多人推荐 IINA，但是我觉得太复杂了，而且使用下来还是 <strong><a target="_blank" rel="noopener" href="https://mpv.io/">MPV</a></strong> 好用（字幕选择方便），IINA 也是基于 MPV 做出来的。</p>
+<h2 id="「睡眠」工具"><a href="#「睡眠」工具" class="headerlink" title="「睡眠」工具"></a>「睡眠」工具</h2><p>Amphetamine 中文直译是安非他命，治疗嗜睡症，所以这个软件就是起到不通电源合盖外接显示器时电脑不会自动休眠，可以合盖听歌听 podcast 了。</p>
+<h2 id="屏幕亮度控制"><a href="#屏幕亮度控制" class="headerlink" title="屏幕亮度控制"></a>屏幕亮度控制</h2><p>Monitor Control，免费又足够好用，使用两个及以上显示器的时候只需要把指针移到当前屏幕就可以用 F1 和 F2 键盘内置的亮度调节开关进行调节。</p>
+<h2 id="其他好玩又必备的软件"><a href="#其他好玩又必备的软件" class="headerlink" title="其他好玩又必备的软件"></a>其他好玩又必备的软件</h2><ol>
+<li><p>Dropover 可以把几乎所有想要的文件、素材通过 shake 指针的方式把它放到一个窗口里整理以便之后使用</p>
+</li>
+<li><p>Macs Fan Control 之前吐槽过 MacBook 的<a href="https://battlele.com/mbp-14/#8-%E7%BA%A2%E4%B8%8E%E9%BB%91">散热逻辑差</a>，需要用这工具来降温</p>
+</li>
+<li><p>Karabiner + Keyboard Holder 组合实现默认选择输入法以及<a target="_blank" rel="noopener" href="https://idawnlight.com/2022/use-left-shift-to-switch-input-sources-on-macos/">按 Shift 在拼音输入法下切换为英文字母输入</a></p>
+</li>
+<li><p>Thor Launcher 选择默认软件并锁定</p>
+</li>
+<li><p>Debit &amp; Credit 用过最好的记账软件，简洁直观，支持上锁和 iCloud 同步，多设备都能用，免费版本就够用</p>
+</li>
+<li><p>Shottr 截图工具，没有手画功能有点可惜</p>
+</li>
+<li><p>Drivedx 检测硬盘信息信息挺丰富的（收费）</p>
+</li>
+<li><p>AS Timer 来填补 macOS 没有闹钟&#x2F;计时器的功能</p>
+</li>
+</ol>
+<h2 id="macOS-使用技巧"><a href="#macOS-使用技巧" class="headerlink" title="macOS 使用技巧"></a>macOS 使用技巧</h2><h3 id="一个概念"><a href="#一个概念" class="headerlink" title="一个概念"></a>一个概念</h3><p>Mission Control 即是调度中心</p>
+<p><img src="https://i.imgur.com/53EdceK.png" srcset="/img/loading.gif" lazyload alt="打开三指拖移很好用"></p>
+<p><img src="https://i.imgur.com/Ba3cRQY.png" srcset="/img/loading.gif" lazyload alt="三指拖移和调度中心三指手势不可兼容"></p>
+<p>以及这个安全设置功能记得要开启：</p>
+<p><img src="https://i.imgur.com/I7IKN7c.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="几个需要稍微记忆的快捷键"><a href="#几个需要稍微记忆的快捷键" class="headerlink" title="几个需要稍微记忆的快捷键"></a>几个需要稍微记忆的快捷键</h3><p>本来想打开骑车软件 Zwift 修改一下配置文件已达到开启 FPS 的目的，该文件位于：~&#x2F;Library&#x2F;Application Support&#x2F;Zwift&#x2F;data&#x2F;configs。</p>
+<p>可是死活都找不到该文件在哪里，看了几篇文章都不得要领，最后请教后才知道该文件是隐藏的，<strong>显示隐藏文件</strong>用快捷键<code>shift ⇧ + command ⌘ + .</code>即可。而这个 <strong>Library</strong>（资源库）并不是 Macintosh HD 目录下的，而是这台 MacBook 的「我」下面的 Library。但是修改一个 ultra.txt 文件还不够，要把剩余的全加上 set gShowFPS&#x3D;1 注释。学废了。</p>
+<p>Control + Command ⌘ + Q：立即锁定屏幕。</p>
+<p>esc + Option⌥ + Command ⌘ ：强制退出应用</p>
+<p>Shift ⇧ + Command ⌘ + 5：截屏窗口</p>
+<p>Command ⌘ + F3 快速显示桌面，我改成了 Option⌥ + D</p>
+<p>在「访达」，Command ⌘ + 1～4 可以切换文件的不同形态</p>
+<p><img src="https://i.imgur.com/oeUWpry.png" srcset="/img/loading.gif" lazyload></p>
+<p>输入声调：中文输入法状态下直接按 Tab</p>
+<p>快速选择文字：<code>Shift ⇧ + ←</code>、<code>Shift ⇧ + →</code></p>
+<p>移动一个单词：<code>Control ⌃ + ←</code>、<code>Control ⌃ + →</code></p>
+<p>删除一个单词：<code>Control ⌃ + Backspace</code></p>
+<p>删除到行首：<code>Command ⌘ + Backspace</code></p>
+<h2 id="浏览器扩展"><a href="#浏览器扩展" class="headerlink" title="浏览器扩展"></a>浏览器扩展</h2><h3 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h3><p><img src="https://i.imgur.com/1zcUmjN.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="白名单模式"><a href="#白名单模式" class="headerlink" title="白名单模式"></a>白名单模式</h4><p><strong>切换规则</strong></p>
+<ul>
+<li>勾选 <code>规则列表规则（按照规则列表匹配请求）</code>：<code>直接连接</code>（国内白名单网站）</li>
+<li>默认情景模式：<code>proxy</code></li>
+</ul>
+<p><strong>规则列表设置</strong></p>
+<ul>
+<li>规则列表格式：<code>AutoProxy</code></li>
+<li>规则列表网址：<code>https://raw.githubusercontent.com/aglent/autoproxy/master/whitelist.pac</code></li>
+<li><code>立即更新情景模式</code></li>
+</ul>
+<p>该段节选自好友 Dr.Ting 的 <a target="_blank" rel="noopener" href="https://tingtalk.me/switchyomega/?highlight=%23%23%23+switchyomega#%E7%99%BD%E5%90%8D%E5%8D%95%E6%A8%A1%E5%BC%8F">blog</a>。</p>
+<p>最后在 General 把网页请求失败提示给关掉。</p>
+<p>备注：如果代理软件有 TUN 模式即可不用此插件。</p>
+<h3 id="Gesturefy"><a href="#Gesturefy" class="headerlink" title="Gesturefy"></a>Gesturefy</h3><p>仅限 Firefox，全浏览器平台最好用的手势扩展支持<strong>纯直线</strong>的鼠标手势，这可是 Better Touch Tool 都做不到的功能</p>
+<h3 id="Tampermonkey-插件"><a href="#Tampermonkey-插件" class="headerlink" title="Tampermonkey 插件"></a>Tampermonkey 插件</h3><p>直译为暴力猴，但是网络上都叫他油猴。不多赘述，大家应该都装了吧。我用的下面几个脚本：</p>
+<p><strong>Bilibili Evolved</strong> 正如其名 Bilibili 增强脚本</p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/syhyz1990/baiduyun">网盘直链下载助手</a></strong> 懂得自然懂</p>
+<h3 id="uBlock-Origin"><a href="#uBlock-Origin" class="headerlink" title="uBlock Origin"></a>uBlock Origin</h3><p>拦截广告神器，看 YouTube 不用看广告</p>
+<h3 id="Saladict-沙拉查词"><a href="#Saladict-沙拉查词" class="headerlink" title="Saladict 沙拉查词"></a>Saladict 沙拉查词</h3><p>划一下就能查单词、句子和整个网页</p>
+<h3 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h3><p>看不过来的网页一键归档</p>
+<p>以后有新的好软件再补充～就这样，写这类文章往往是最累的……</p>
+<h2 id="消灭软件残余"><a href="#消灭软件残余" class="headerlink" title="消灭软件残余"></a>消灭软件残余</h2><p>如何把软件残余删除干净？</p>
+<p><img src="https://i.imgur.com/7m7NtDE.png" srcset="/img/loading.gif" lazyload alt="比如这些不需要的音频输入设备"></p>
+<p>搜索「uninstall background music」在官方页面找到卸载指南</p>
+<p>备注：</p>
+<p><img src="https://i.imgur.com/3KRujen.png" srcset="/img/loading.gif" lazyload alt="有时候点一下灰色的 ➖，其实也能删除的！"></p>
+<p>卸载软件官方卸载工具（uninstall Creative Cloud）</p>
+<p><img src="https://i.imgur.com/gMnwamB.png" srcset="/img/loading.gif" lazyload alt="这玩意儿是真的恶心"></p>
+<p>祭出大招，给你手动删干净了！</p>
+<p><code>/Library/Logs</code></p>
+<p><code>/Library/Caches/</code></p>
+<p><em><code>/Library/Preferences</code></em></p>
+<p><em><code>/Library/LaunchAgents</code></em></p>
+<p><em><code>/Library/LaunchDaemons</code></em></p>
+<p><em><code>/Library/Application Support</code></em></p>
+<p><em><code>/Library/PrivilegedHelperTools</code></em></p>
+<p>个人用户文件夹：</p>
+<p><code>~/Library/Logs</code></p>
+<p><code>~/Library/Caches/</code></p>
+<p><code>~/Library/Containers</code></p>
+<p><code>~/Library/Preferences</code></p>
+<p><code>~/Library/LaunchAgents</code></p>
+<p><code>~/Library/Group Containers</code></p>
+<p><code>~/Library/Application Support</code></p>
+<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><p>设置 Memoji 作为 Apple ID 的头像（iPhone 设置要在通讯录里编辑自己的名片），在锁屏界面，头像就会动，输错密码，他（你自己）甚至会摇头。</p>
+<p><img src="https://i.imgur.com/vqxT6Ia.jpg" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/course/" class="category-chain-item">course</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/geek/">#geek</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>macOS 佳软及迁移设置合集</div>
+      <div>http://battlele.com/macos-setup/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Lucky</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>May 1, 2022</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Updated on</div>
+          <div>July 25, 2022</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/macos-recovery/" title="通过 u盘启动器恢复并降级 macOS">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">通过 u盘启动器恢复并降级 macOS</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/tcr-build/" title="圈刹遗珠之 TCR 装车记">
+                        <span class="hidden-mobile">圈刹遗珠之 TCR 装车记</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://t.me/battlele" target="_blank" rel="nofollow noopener"><span>Battle</span></a> <i class="iconfont icon-love"></i> <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Le</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

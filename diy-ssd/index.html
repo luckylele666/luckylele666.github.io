@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Lucky">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="自上次 S3710 淘宝失败，又沉寂了许久，但是不备份数据还是慌得很，就又开始了我的折腾之旅。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DIY SSD 测试">
+<meta property="og:url" content="http://battlele.com/diy-ssd/index.html">
+<meta property="og:site_name" content="Battle Le 博客">
+<meta property="og:description" content="自上次 S3710 淘宝失败，又沉寂了许久，但是不备份数据还是慌得很，就又开始了我的折腾之旅。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/O4AwfN4.png">
+<meta property="article:published_time" content="2021-07-17T09:10:00.000Z">
+<meta property="article:modified_time" content="2022-06-14T14:46:08.736Z">
+<meta property="article:author" content="Lucky">
+<meta property="article:tag" content="device">
+<meta property="article:tag" content="geek">
+<meta property="article:tag" content="ssd">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/O4AwfN4.png">
+  
+  
+  
+  <title>DIY SSD 测试 - Battle Le 博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"tajs":null},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-161026029-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Battle Le 博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Battle Le</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="DIY SSD 测试"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-07-17 17:10" pubdate>
+          July 17, 2021 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          1.2k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">DIY SSD 测试</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：June 14, 2022 pm
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="2022-3-17-Update"><a href="#2022-3-17-Update" class="headerlink" title="2022.3.17 Update"></a>2022.3.17 Update</h2><p>之前都是用一根易驱线来使用硬盘的，但是稍微动一下就会断开连接，本身设计也不是支持热插拔的。最近换到 macOS 了，把 PSSD 作为 Time Machine 使用，那就需要上硬盘盒了，问了 DIY 卖家，果然有一块推荐，CyberSLIM，一家台湾的厂商，主控芯片用的是目前差不多最好的 ASM235CM。当然价格就不美好，要一张红钞票了。</p>
+<p><img src="https://i.imgur.com/8FaYNE6.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/bDTwpiR.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>银色拉丝金属外壳还挺好看的，兼容 2.5 寸 7 mm&#x2F;9.5 mm，我这盘是 7 mm，拧上螺丝也不会松动，稳定性挺好，还是要螺丝固定靠谱。换上 C To C 的线（很是粗硬，韧性不足）也不会觉得这块 SATA 是很古早的东西啦，接着开始测试，在 macOS 测试环境下需要把文件系统更改为 exFAT，这样才能在两个系统之间使用并且可以 Write。</p>
+<p>先在老的 XPS 上测速：</p>
+<p><img src="https://i.imgur.com/yLFBRzw.jpg" srcset="/img/loading.gif" lazyload alt="左为易驱线测试结果"></p>
+<p><img src="https://i.imgur.com/UZueCrM.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/7eczqCc.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到速度确实提升了。接着在 macOS 上测试：</p>
+<p><img src="https://i.imgur.com/Rb6DQ2Z.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/A81NYmf.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>不知为何，速度不如 Windows 的，又把螺丝拧开又试了易驱线，速度也是一样。可能是因为 trim 没有开启，另外 Win10 支持 UASP。</p>
+<p><img src="https://i.imgur.com/MGgXTAb.png" srcset="/img/loading.gif" lazyload alt="Black Magic Disk SpeedTest"></p>
+<p>别的测试软件是在处理视频场景下的测试，和 CrystalDiskMark 对比没有啥参考性。</p>
+<p>不停折腾的我在<strong>终端</strong>里输入 <code> sudo trimforce enable</code> 手动开启，开启前 Apple 会警告数据损坏责任自负的提示……</p>
+<p><img src="https://i.imgur.com/mPYjApM.png" srcset="/img/loading.gif" lazyload alt="硬盘盒 B25U31 &amp; Apple M1 Pro"></p>
+<p>重启后再次测试，然而速度并没有提升，甚至还低了一点。</p>
+<p>卖 SSD 的店家说雷雳 4 相当于非原生接口，这速度还是原生的 USB 3.1。诚然，也有系统环境不同等诸多因素，只能安慰自己，他的 MLC 属性寿命很长，用不坏😭要想速度还是成品 NVME 吧。</p>
+<p>这里秀一下 MacBook Pro 14‘’ 自带的三星 MLC 固态的功力吧：</p>
+<p><img src="https://i.imgur.com/INMWLps.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/NS6jnit.png" srcset="/img/loading.gif" lazyload></p>
+<hr>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h2><p><img src="https://i.imgur.com/0qEZsRL.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://i.imgur.com/grH1ggk.png" srcset="/img/loading.gif" lazyload></p>
+<p>外观还不错，有个外壳。来看下数据吧。</p>
+<p><img src="https://i.imgur.com/PgRpNut.jpg" srcset="/img/loading.gif" lazyload alt="商家关于 SSD 的知识"></p>
+<p>参数：</p>
+<ol>
+<li>Intel 3D MLC 500G（据说是最好的 3D MLC）</li>
+<li>海力士 512M 缓存</li>
+<li>SMI 2258H 主控 </li>
+<li>2.5 寸，7 mm 厚度</li>
+<li>SATA 3 接口</li>
+</ol>
+<p>先用 CrystalDiskInfo 查看各项信息，无通电，零使用，接着用 AS SSD 开始测试</p>
+<p><img src="https://i.imgur.com/3eUiz7Y.png" srcset="/img/loading.gif" lazyload alt="AS SSD"></p>
+<p>写入速度差一点上 400 MB&#x2F;s，不算特别满意，</p>
+<p><img src="https://i.imgur.com/JbSBdQx.png" srcset="/img/loading.gif" lazyload alt="AS SSD IOPS 测试"></p>
+<p>接着用 CrystalDiskMark 来测，</p>
+<p><img src="https://i.imgur.com/3d6mD5N.png" srcset="/img/loading.gif" lazyload alt="CrystalDiskMark"></p>
+<p>顺序读取速度差不多，顺序写入在此软件中速度高上许多。</p>
+<p>最后再用 HD Tune Pro 来进行<strong>底层测试</strong>，</p>
+<p><img src="https://i.imgur.com/XJz6PAR.jpg" srcset="/img/loading.gif" lazyload alt="HD Tune Pro"><img src="https://i.imgur.com/VyV1MXh.jpg" srcset="/img/loading.gif" lazyload alt="HD Tune Pro 2"></p>
+<p>这里的测试速度直接腰斩。</p>
+<p><img src="https://i.imgur.com/JuqDXuq.png" srcset="/img/loading.gif" lazyload alt="IOPS 测试"></p>
+<p>看看实际应用环境下的表现，写入两部共 25 GB 的电影，</p>
+<p><img src="https://i.imgur.com/jtTP7io.png" srcset="/img/loading.gif" lazyload></p>
+<p>表现还算平稳，没有很大波动，再写入小文件，</p>
+<p><img src="https://i.imgur.com/U7g1vUL.png" srcset="/img/loading.gif" lazyload></p>
+<p>每秒只有大概 110 MB&#x2F;s 的速度，波动较大，处理成千上万个文件还是很吃力。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只能说这块 MLC SSD 的硬盘中规中矩吧，</p>
+<p><strong>缺点</strong>：店家用的慧荣 SMI2258H 很一般，成本可能只有几十块，没有 Intel S3710 的好。加上硬盘盒和易驱线上的转接芯片实在糟糕，没什么好的选择， SATA 转 USB 的速度必然会打折扣。</p>
+<p><strong>优点</strong>：这块 DIY 的盘价格低，速度不快但是稳定。将就着用，未来很长一段时间都不会折腾了。</p>
+<p>P.S. SATA 3.0 是串行 ATA 国际组织 (SATA-IO) 在 2009 年 5 月份发布的规范，至今已经足足 12 年，而我还只能用这个……</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/digital/" class="category-chain-item">digital</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/device/">#device</a>
+      
+        <a href="/tags/geek/">#geek</a>
+      
+        <a href="/tags/ssd/">#ssd</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>DIY SSD 测试</div>
+      <div>http://battlele.com/diy-ssd/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Lucky</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>July 17, 2021</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Updated on</div>
+          <div>June 14, 2022</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/shuangchengji/" title="双城记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">双城记</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/anti-crash/" title="我的防崩溃机制">
+                        <span class="hidden-mobile">我的防崩溃机制</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://t.me/battlele" target="_blank" rel="nofollow noopener"><span>Battle</span></a> <i class="iconfont icon-love"></i> <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Le</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

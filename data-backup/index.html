@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Lucky">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="备份的意义我想大家都多多少少遇到过设备死机、进水、被偷，甚至被黑客勒索的事情吧。从概率上来说，数据丢失只是早晚的事情。这就是为什么要备份，不然可能青春的回忆，各种美好就再也不见了，那会很痛，可能比失恋还痛。  「不同裝置都有相同的資料才叫作資料備份，只是換個裝置存放不叫做備份[1]」  我和一些网络上厉害的家伙聊过，发现他们也没有做到真正的备份。把数据一股脑丢进硬盘，把数据丢进各种网盘&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人备份指北">
+<meta property="og:url" content="http://battlele.com/data-backup/index.html">
+<meta property="og:site_name" content="Battle Le 博客">
+<meta property="og:description" content="备份的意义我想大家都多多少少遇到过设备死机、进水、被偷，甚至被黑客勒索的事情吧。从概率上来说，数据丢失只是早晚的事情。这就是为什么要备份，不然可能青春的回忆，各种美好就再也不见了，那会很痛，可能比失恋还痛。  「不同裝置都有相同的資料才叫作資料備份，只是換個裝置存放不叫做備份[1]」  我和一些网络上厉害的家伙聊过，发现他们也没有做到真正的备份。把数据一股脑丢进硬盘，把数据丢进各种网盘&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/bWgMuoE.jpg">
+<meta property="article:published_time" content="2022-06-14T14:30:00.000Z">
+<meta property="article:modified_time" content="2022-06-21T12:31:49.434Z">
+<meta property="article:author" content="Lucky">
+<meta property="article:tag" content="geek">
+<meta property="article:tag" content="ssd">
+<meta property="article:tag" content="skill">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/bWgMuoE.jpg">
+  
+  
+  
+  <title>个人备份指北 - Battle Le 博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"tajs":null},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-161026029-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Battle Le 博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Battle Le</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="个人备份指北"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-14 22:30" pubdate>
+          June 14, 2022 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          2k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">个人备份指北</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：June 21, 2022 pm
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="备份的意义"><a href="#备份的意义" class="headerlink" title="备份的意义"></a>备份的意义</h2><p>我想大家都多多少少遇到过设备死机、进水、被偷，甚至被黑客勒索的事情吧。从概率上来说，数据丢失只是早晚的事情。这就是为什么要备份，不然可能青春的回忆，各种美好就再也不见了，那会很痛，可能比失恋还痛。</p>
+<blockquote>
+<p><strong>「不同裝置都有相同的資料才叫作資料備份，只是換個裝置存放不叫做備份<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[資料備份方法和觀念，常見的5種裝置](https://www.r-data.com.tw/technical-detail/45/)">[1]</span></a></sup>」</strong></p>
+</blockquote>
+<p>我和一些网络上厉害的家伙聊过，发现他们也没有做到真正的备份。把数据一股脑丢进硬盘，把数据丢进各种网盘&#x2F;云服务，甚至程序员也只是把代码放在 GitHub 上。这些都不是备份，国内的网盘不说了，诸如 iCloud 和 Google Drive，本质是个同步盘。历史上不管是 iCloud 还是 Google Drive 都出现过宕机问题，不把鸡蛋放在一个篮子里，要狡兔三窟。</p>
+<p>备份的目的是为了可以「无损」<strong>还原</strong>，如果不能还原，储存再多的数据也没有意义。</p>
+<h2 id="备份类型"><a href="#备份类型" class="headerlink" title="备份类型"></a>备份类型</h2><ul>
+<li>全部备份（Full Backup，包括系统）备份数据量大，备份所需时间长。</li>
+<li>增量备份（Incremental Backup）自上一次完全备份后<strong>有变化</strong>数据的备份</li>
+<li>差异备份 (Differential backup) 提供完整备份后<strong>变更</strong>的文件</li>
+</ul>
+<p>第一种全盘备份，举个例子，从一台电脑上一模一样搬迁到另一台电脑上。有些备份是不包括系统设置数据的，还原数据后需要重新设定应用设置、字体大小、系统语言啊，种种……准备系统备份的好处在于带有一个开机系统，比如 Windows 的 WinPE，macOS 的<a href="https://battlele.com/macos-recovery/">可引导安装器</a>。</p>
+<p>差异备份与增量备份的区别在于前者包括上一次完全备份、差异备份或增量备份，后者仅是上一次<strong>完全备份</strong>后有变化。挺绕的……</p>
+<h2 id="3-2-1-1-0-原则"><a href="#3-2-1-1-0-原则" class="headerlink" title="3-2-1-1-0 原则"></a>3-2-1-1-0 原则</h2><ul>
+<li>至少做三份数据副本（一份本体，两份 copy）</li>
+<li>存储在至少两种不同类型的<strong>存储介质</strong>上</li>
+<li>在异地位置保留一份备份副本</li>
+</ul>
+<p>在 3-2-1 原则再加两点<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Backblaze 的备份原则](https://www.backblaze.com/blog/whats-the-diff-3-2-1-vs-3-2-1-1-0-vs-4-3-2/)">[2]</span></a></sup>，</p>
+<ul>
+<li>将一份媒体副本离线或隔空</li>
+<li>确保所有可恢复性解决方案没有错误（刚说备份之目的）</li>
+</ul>
+<p><img src="https://i.imgur.com/4hcg7hP.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>在这个科技高度发展的年代，其实最安全的储存方式还是用磁带保存，埋在一个角落（比如 GitHub 埋在北极的胶片<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="[GitHub 要把全球开源代码埋在北极，保存 1000 年](https://www.ifanr.com/1282927)">[3]</span></a></sup>）。</p>
+<h2 id="云备份"><a href="#云备份" class="headerlink" title="云备份"></a>云备份</h2><p>当然我们不用这么极端，用个靠谱的云备份就行了，也是一种异地备份。刚刚讲过，常规的那些网盘不算备份，要选择专门用来备份的云存储服务，那么靠谱的备份服务有哪些呢，可选的不多。</p>
+<p>大家公认的有  <a target="_blank" rel="noopener" href="https://www.backblaze.com/cloud-backup.html">Backblaze Personal Backup</a>。每月 $7，不限备份容量，从 2007 年运营至今，稳定。懒人首选，只要后台开着软件就可以无感备份，手机端有 App 也可以备份。</p>
+<p>对于国内用户来说由于<strong>网络封锁</strong>，需要耗费代理流量，第一次备份需要注意流量。<strong>从国内访问，稳定性一定要考虑</strong>，可是目前无解。</p>
+<p>还有一个严格意义来说不算提供云储存服务的软件——<a target="_blank" rel="noopener" href="https://www.arqbackup.com/"><strong>Arq</strong></a>， 2009 年运营，$49.99 买断单设备，Premium $59.99&#x2F;year（提供 1 TB 云空间，不推荐）</p>
+<p>搭配第三方云端空间使用，官方描述：Use it for <strong>encrypted</strong>, versioned backups of your important files. 有加密功能不错。</p>
+<p><img src="https://i.imgur.com/Kfy08la.png" srcset="/img/loading.gif" lazyload alt="相当于一个云服务整合管理器"></p>
+<h2 id="硬盘备份"><a href="#硬盘备份" class="headerlink" title="硬盘备份"></a>硬盘备份</h2><p>推荐用硬盘来储存，硬盘分为 HDD（机械硬盘）和 SSD（固态硬盘），硬盘可是大有学问，这里不展开了，感兴趣的可以在本 blog 搜索 <a href="https://battlele.com/diy-ssd/">SSD</a>。</p>
+<p>相比之下 SSD 的优势在：</p>
+<ol>
+<li>SSD 读取写入速度快，快就是王道</li>
+<li>SSD 的寿命（写入和擦除）长</li>
+<li>SSD 可以在使用中移动</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>售价贵</li>
+<li>恢复数据困难</li>
+</ol>
+<p>不管是 HDD 还是 SSD，<strong>「任何的存储装置都是消耗品」</strong>，说不定哪天就挂掉了，所以多准备一块硬盘吧。虽然 SSD 也能抢救资料，但是恢复难度大（要看硬盘哪里损坏）关键是数据恢复又贵（基本 ¥2000 以上）又麻烦还不安全（冠希哥艳照门）。</p>
+<h2 id="Time-Machine"><a href="#Time-Machine" class="headerlink" title="Time Machine"></a>Time Machine</h2><p>用 Mac 的同学可以用一下这个，免费，但是<a href="https://battlele.com/timemachine-error/">不太好用</a>，设定逻辑太简单，Apple 没有好好做，所以有下面的软件推荐。</p>
+<h2 id="搭配硬盘使用的备份软件"><a href="#搭配硬盘使用的备份软件" class="headerlink" title="搭配硬盘使用的备份软件"></a>搭配硬盘使用的备份软件</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html">SuperDuper (2004 年</a> $27.95 买断制，有免费版功能少一点也可以用，优点是可以把 SSD 作为一个启动盘，支持差异备份。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://bombich.com/">Carbon Copy Cloner 6</a> $39.99 更加老牌的一个软件，官方的口号是「A leader in Mac backups since 2002」，速度和稳定性比 Time Machine 好，口碑不错。</p>
+</li>
+</ul>
+<p>上述备份软件和 Backblaze 都提供试用，可以选择一款适合自己的。</p>
+<h2 id="NAS-备份"><a href="#NAS-备份" class="headerlink" title="NAS 备份"></a>NAS 备份</h2><p>我没有使用 NAS，这方面不了解，根据需求选择。用 NAS 也要有双保险，做好异地备份。虽然硬盘不怕坏了，但是也有一些不可抗力因素。</p>
+<h2 id="备份内容"><a href="#备份内容" class="headerlink" title="备份内容"></a>备份内容</h2><p>除了全盘备份，还需要注意保存在云上的数据，比如我存在 Bitwarden 上的密码。暂时好像没有别的了。</p>
+<hr>
+<p>看了那么多，今天你备份了吗？Just do it！</p>
+<section class="footnotes"><h2>参考</h2><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.r-data.com.tw/technical-detail/45/">資料備份方法和觀念，常見的5種裝置</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.backblaze.com/blog/whats-the-diff-3-2-1-vs-3-2-1-1-0-vs-4-3-2/">Backblaze 的备份原则</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.ifanr.com/1282927">GitHub 要把全球开源代码埋在北极，保存 1000 年</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://podcast.starrocket.io/125">命運總是會考驗你有沒有備份電腦資料</a>（很有帮助哦）
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/course/" class="category-chain-item">course</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/geek/">#geek</a>
+      
+        <a href="/tags/ssd/">#ssd</a>
+      
+        <a href="/tags/skill/">#skill</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>个人备份指北</div>
+      <div>http://battlele.com/data-backup/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Lucky</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 14, 2022</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Updated on</div>
+          <div>June 21, 2022</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/courier-lost/" title="快递丢失该怎么办？">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">快递丢失该怎么办？</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/gas-heater/" title="挑选燃气热水器的门道">
+                        <span class="hidden-mobile">挑选燃气热水器的门道</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://t.me/battlele" target="_blank" rel="nofollow noopener"><span>Battle</span></a> <i class="iconfont icon-love"></i> <a href="https://battlele.com" target="_blank" rel="nofollow noopener"><span>Le</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
