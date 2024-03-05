@@ -386,7 +386,7 @@
 
 <p>接着三个回车，不需要设置<strong>密码</strong>，在 .ssh 文件夹的 id_rsa.pub 文件复制全部内容，打开 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a>，点 New SSH key，Title 随便写，然后在 Git Bash 检测 SSH key 是否设置成功，输入 <code>ssh -T git@github.com</code>，原理是公钥放在 GitHub，私钥放在电脑里。GitHub 每次都要验证是不是你，为了方便，采用 SSH，所以需要私钥跟 GitHub 公钥配对，然而我就遇到了无法配对的情况，这是第二个大坑！</p>
 <p><img src="https://i.imgur.com/voONH2V.png" srcset="/img/loading.gif" lazyload></p>
-<p>「ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a> ssh: connect to host github. com port 22: Connection timed out」显示超时，GitHub 被污染严重，国内用户常常头疼……</p>
+<p>「ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a> ssh: connect to host github. com port 22: Connection timed out」显示超时，GitHub 被污染严重，国内用户常常头疼……</p>
 <p>后来找到的解决方法：</p>
 <ol>
 <li><p>打开 _config.yml 配置文件</p>
@@ -396,14 +396,14 @@
 </ol>
 <p>deploy:</p>
 <p>type: &#39;git&#39;</p>
-<p>repo: <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a>:yourname&#x2F;yourname.github.io.git</p>
+<p>repo: <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>:yourname&#x2F;yourname.github.io.git</p>
 <p>branch: master</p>
 <p>其实这个问题很简单，但是我没有仔细 Google，或者说以为问题不是这样解决的，浪费了大量时间，<strong>以后遇到问题应该什么方法都试一下，反正已经出错了也不怕再糟糕。</strong></p>
 <p>然后绑定自己的顶级域名 <a href="https://battlele.com/blog/">具体操作</a> 不赘述，不想花钱买也可以用 GitHub 的。</p>
 <h2 id="Fatal"><a href="#Fatal" class="headerlink" title="Fatal"></a>Fatal</h2><p>想试下广受好评的 NexT 主题，直接 <code>npm install hexo-theme-next</code>，我打开  themes 没有看到文件夹以为安装失败，随后才知道，Hexo 5.0 之后更换了安装方式。主题文件夹位于 node_modules，安装前还是要阅读主题说明文档（论看资料的重要性），在接下来的步骤我居然又遇到了<strong>「Spawn failed」</strong>问题！再次搜索找到使用 <code>git reset --hard commitId</code> 的方法，这个 commitId 让我搞不懂，在高人指点下才知道这是一串 GitHub 上 commit 的 sha 码，但是回滚无效（写这篇 blog 时候看到 <code>git push -f</code> 有效。未验证）就此陷入死循环，再次搁置，看看教学视频缓解下急躁的心情。半夜在 Hexo 博客群友的再次提醒下 <code>hexo init test</code> 检查，还是配置文件问题，发现</p>
 <p>deploy:</p>
 <p>type: &#39;git&#39;</p>
-<p>repo: <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:yourname&#x2F;yourname.github.io.git</p>
+<p>repo: <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#109;</a>:yourname&#x2F;yourname.github.io.git</p>
 <p>branch: master</p>
 <p>里面居然有个中文？！去掉后万事大吉，天哪，真是太为难我。</p>
 <h2 id="新主题"><a href="#新主题" class="headerlink" title="新主题"></a>新主题</h2><p>熬到很晚，睡了一觉，起床已经是我最爱的九月了！之前的一波三折消耗我的耐心，决定再换个新主题，看了一圈，喜欢卡片式设计看到这个主题 Fluid，虽然没有液体的感觉，但是够简洁，之前就注意过，最近才更新，就你了。虽然没有 npm 安装，但是压缩包解压到 themes 不会出错，在安装过程中又报错，我心里咯噔一下，但是经过之前的波折，平稳许多，根据报错提示，是 Melody 和 NexT 主题插件加载失败错误，搜索后：</p>
