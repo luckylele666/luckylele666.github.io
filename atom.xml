@@ -6,7 +6,7 @@
   <link href="http://battlele.com/atom.xml" rel="self"/>
   
   <link href="http://battlele.com/"/>
-  <updated>2025-01-22T14:59:36.795Z</updated>
+  <updated>2025-02-07T14:53:31.171Z</updated>
   <id>http://battlele.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给 Blog 域名续费</title>
+    <link href="http://battlele.com/renew-domain/"/>
+    <id>http://battlele.com/renew-domain/</id>
+    <published>2025-02-07T15:00:00.000Z</published>
+    <updated>2025-02-07T14:53:31.171Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="选择域名供应商"><a href="#选择域名供应商" class="headerlink" title="选择域名供应商"></a>选择域名供应商</h2><p>本博客又到了一年一度的续费时间了，一看续费价格，$17.29。这是欺负我记忆不好，去年还是 $13.95，再前一年是 $10.95，一年比一年贵。作为 Geeker 这不能白白挨宰。做一番功课，大不了每年换一家续费，问了下 ChatGPT，大概有十二家主流域名供应商，分别是：</p><ul><li><p>Namecheap</p></li><li><p>GoDaddy</p></li><li><p>Namesilo</p></li><li><p>Dynadot</p></li><li><p>Domain.com</p></li><li><p>Name.com</p></li><li><p>Google Domains（已并入 Squarespace）</p></li><li><p>Hover</p></li><li><p>Porkbun</p></li><li><p>Cloudflare Domains</p></li><li><p>阿里云&#x2F;腾讯云</p></li></ul><p><img src="https://i.imgur.com/QnCmmRm.jpeg" alt="ChatGPT 给的建议（"></p><p>我是在 Namesilo 注册的，当年应该算是低价，现在是越来越杀熟了。其中 Cloudflare 只提供转入域名续费，不支持新注册域名。但是其号称以成本价提供域名注册，没有额外加价。所以其续费价格可作为基准线。很多服务商转入优惠是<del>亏本卖的</del>，所以实际上会比 Cloudflare 还便宜。</p><h2 id="转入域名并续费价格"><a href="#转入域名并续费价格" class="headerlink" title="转入域名并续费价格"></a>转入域名并续费价格</h2><p>以一年的价格来做个排名，我没有测试上述提到的全部十二家，因为本 blog 非备案，所以不考虑国内两家，其余我看过的价格有：</p><p>Spaceship $9.48</p><p>Porkbun 用了 $1 coupon 后 $10.06</p><p>Cloudflare <strong>$10.44</strong></p><p>Dynadot 原价 $10.86 用 coupon 后 $10.49</p><p>Namecheap $11.66</p><p>Name.com $18.17，比 Namesilo 还贵……那向来就不便宜的 GoDaddy 就不用看了，Squarespace 需要注册才能看价格，pass，估计不会便宜。</p><p>本来第一个看的是 Cloudflare，但是其不支持 EPP（Extensible Provisioning Protocol 可扩展供应协议） 或 Auth Code（授权码） 来转移域名，问了下朋友，她的  <code>.com</code> 域名续费是 $10.44。</p><p>其中 Spaceship 相当于 Namecheap 的子品牌，名字起的有意思。由 Namecheap 创始人 Richard Kirkendall 推出，其 UI 是最现代化的，和 Namesilo 形成鲜明的对比啊，一个看起来像二十年前的网站，冲着这点就加分。本来还不知道这个网站， 是 AI <strong>Kimi</strong> 告诉我的，居然帮我省时间了。虽然我是自己交叉验证确认他这个结果是准确的。</p><h2 id="域名比价网站"><a href="#域名比价网站" class="headerlink" title="域名比价网站"></a>域名比价网站</h2><p>还发现几个网站可以参考比价。</p><ul><li><a href="https://domcomp.com/">https://domcomp.com/</a></li><li><a href="https://tld-list.com/">https://tld-list.com/</a></li><li><a href="https://tldes.com/">https://tldes.com/</a></li></ul><p>其中 Spaceship 均排名靠前，那就他了。</p><h2 id="转移域名"><a href="#转移域名" class="headerlink" title="转移域名"></a>转移域名</h2><p>首先需要 EPP 或者 Auth Code，简单来说，EPP 是域名注册系统的标准通信协议，使不同注册商可以统一管理域名。把域名从一个注册商转移到另一个注册商时，需要提供这个 Auth Code 作为身份验证，防止未经授权的域名转移。</p><p>一开始在 Namesilo 没找到，<a href="https://www.namesilo.com/blog/en/support-guides/understanding-the-epp-auth-code">翻阅文档</a>才发现需要下载才能找到 EPP 和 NameServer。</p><p><img src="https://i.imgur.com/EQjOO0z.jpeg" alt="藏的好深啊"></p><p><strong>域名转移流程（简要）</strong></p><ol><li><p><strong>解锁域名</strong>（Unlock Domain）：在当前注册商后台关闭「域名锁定」</p></li><li><p><strong>获取 Auth Code</strong>（EPP Code）：在要转移的域名商处填写</p></li><li><p><strong>在新注册商提交转移请求</strong>：输入 Auth Code 并支付转移费用（基本就是续费一年的价格）</p></li><li><p><strong>确认转移</strong>：旧注册商可能会发送确认邮件，需要确认转移</p></li><li><p><strong>等待完成</strong>：通常 几分钟到 5 天内转移完成</p></li></ol><p>Unlock Domain 和填入 EPP 后基本上就能成功转出了，注册后登录 Spaceship 支持  Passkey。然后就是付款</p><p><img src="https://i.imgur.com/sKuralc.jpeg"></p><p>Spaceship 付款支持支付宝，选项挺多的。在线客服回复很快，很加分，相比之下，Cloudflare 还需要 Business 级别才提供在线支持……<strong>小提示：问一下客服有 coupon 可以用</strong>，TA 发给我「SPSCOMTR」又在原价基础上便宜了 <strong>$1.31</strong>。这比砍一刀爽多了😄</p><p>像我 DNS 设置也没变，就按照之前的，之后折腾下可能换用 Cloudflare NS 接入，配置比较好一点，可以配置免费的域名邮箱啥的。</p><p>经朋友提醒，在收到 Namesilo 迁出邮件后，去<a href="https://www.namesilo.com/account_transfers.php">这里</a>确认，可以加速迁出，只要几分钟。然后再去 Spaceship Transfer Manager 看下进度，成功后在 Domain Manager 就能看到域名了。</p><p>大功告成🎉</p><h2 id="重新部署-NameServers"><a href="#重新部署-NameServers" class="headerlink" title="重新部署 NameServers"></a>重新部署 NameServers</h2><p>我这个域名是作为 Blog 使用，部署在 GitHub Pages 上，需要重新设置 DNS 记录。也就是添加 <strong>A 记录</strong>和 <strong>CNAME</strong>，五年前做过的早就忘记了，问了下 ChatGPT，他很聪明告诉我，</p><ol><li>登录 GitHub，进入 仓库。</li><li>打开 Settings（设置） → 找到 “Pages” 选项<ol start="3"><li><pre><code class="hljs">确认 Pages 已启用，并记住你的 GitHub Pages 站点地址，例如：_github-pages-challenge-用户名</code></pre><ol start="4"><li><pre><code class="hljs">确认 GitHub Pages 里绑定了你的域名，并启用了 Enforce HTTPS</code></pre></li></ol></li></ol></li></ol><p>接着在 Spaceship 添加 DNS 记录：</p><table><thead><tr><th>类型</th><th>主机名</th><th><strong>值（IP 地址）</strong></th><th><strong>TTL</strong></th></tr></thead><tbody><tr><td>A</td><td>@</td><td>185.199.108.153</td><td>3600</td></tr><tr><td>A</td><td>@</td><td>185.199.109.153</td><td>3600</td></tr><tr><td>A</td><td>@</td><td>185.199.110.153</td><td>3600</td></tr><tr><td>A</td><td>@</td><td>185.199.111.153</td><td>3600</td></tr><tr><td>CNAME</td><td>www</td><td>yourusername.github.io</td><td>3600</td></tr><tr><td>_github-pages-challenge-yourusername.yourdomin.com</td><td>TXT</td><td>Github 生成的</td><td>3600</td></tr></tbody></table><p>获取 GitHub 提供的 TXT 记录</p><p>​1.登录 GitHub → 进入你的 仓库。</p><p>​2.进入 Settings（设置） → Pages 选项。</p><pre><code class="hljs">3.在 Custom domain（自定义域名） 部分，输入域名，GitHub 会提示需要验证域名，并给出一条 TXT 记录。</code></pre><p>结果实际是我遇到两个问题，Spaceship 提示四条 A 记录冲突，GitHub 提示「We were unable to verify ownership of battlele.com. We couldn’t find the TXT record. Note that DNS changes can take up to 24 hours. 」就是目前无法验证的意思啦。</p><p>我又轱辘来回倒腾，什么删除 DNS 缓存，删掉四条 A 记录都试了，均无法成功。后来请教大神<a href="ttps://idawnlight.com/">余光</a>，他一针见血，是不是我的 <strong>Nameserver 没配置</strong>，还是之前的 Namesilo，域名迁出就停止服务了，换成 Spaceship 默认的，等了一会儿（这时候需要耐心等待 DNS 传播），果然正常可以访问了。</p><p><img src="https://i.imgur.com/1gGvSMZ.jpeg" alt="DNS NS 记得修改"></p><p><img src="https://i.imgur.com/daDQq8b.jpeg" alt="GitHub 也正常了"></p><p><img src="https://i.imgur.com/tXmtwFH.jpeg"></p><p>当然四条 A 记录还是要添加的，都折腾到这了，为了以后不折腾 DNS NS，一劳永逸，就用 Cloudflare 的 NS 服务吧（下午还想着没用上注销掉，晚上就真香了）。</p><p>在 Cloudflare 添加域名，然后自动有搜索 DNS，底部有 Free 计划，下一步后会出现两个地址，在 Spaceship 替换就 OK 了，最后多一步，在 SSL&#x2F;TLS-Overview把模式改为 Full，开启端到端加密。就可以走 Cloudflare 的 CDN 网络了。虽然 GitHub 也是自动强制 HTTPS，应该会自动处理，DNS check successful。完美了✅</p>]]></content>
+    
+    
+    <summary type="html">年费域名续费管理也有些门道</summary>
+    
+    
+    
+    <category term="course" scheme="http://battlele.com/categories/course/"/>
+    
+    
+    <category term="geek" scheme="http://battlele.com/tags/geek/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次更换汽车刹车片</title>
@@ -432,29 +453,6 @@
     <category term="life" scheme="http://battlele.com/tags/life/"/>
     
     <category term="experience" scheme="http://battlele.com/tags/experience/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初试乐高积木之 Ferrari 488 GTE</title>
-    <link href="http://battlele.com/ferrari-488/"/>
-    <id>http://battlele.com/ferrari-488/</id>
-    <published>2022-10-29T03:05:00.000Z</published>
-    <updated>2022-11-10T13:44:03.423Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="开箱"><a href="#开箱" class="headerlink" title="开箱"></a>开箱</h2><p><img src="https://i.imgur.com/TUbwvRs.jpg" alt="LEGO TECHNIC #42125 Ferrari 488 GTE"></p><p><img src="https://i.imgur.com/URXqnS4.jpg" alt="真车图"></p><p>这是一个女生送我的，我的第一款乐高模型玩具，编号为 42125。是我很喜欢的赛车，还是赛版的红色跃马，这谁能不爱？</p><h2 id="开拼"><a href="#开拼" class="headerlink" title="开拼"></a>开拼</h2><p>一开始觉得手残党难以完成，但是不能妄自菲薄，耐下心来就可以完成，不能说简单，包装上的标注是适合 18+ 的玩家。</p><p>给的图纸说明书共有 321 页，总计 1684 个零件。我先把小零件按照颜色分类好，这样用的时候就方便许多。</p><p><img src="https://i.imgur.com/sBMlw9s.jpg"></p><p><img src="https://i.imgur.com/giluzxY.jpg" alt="拼到这里就领略了乐高的巧妙"></p><p>这部赛车是由内而外的搭建，先把悬挂和动力系统组装完毕，再搭建赛车的外壳，就像打造一辆真正的赛车一样。</p><p><img src="https://i.imgur.com/pHHKyZk.jpg"></p><p>贴纸的时候也能逼疯我，方方正正的尤其难，撕掉重贴再撕掉重贴。</p><p><img src="https://i.imgur.com/1oFEn4m.jpg"></p><p><img src="https://i.imgur.com/1xAjTmD.jpg" alt="强迫症要把 Logo 都对齐"></p><p><img src="https://i.imgur.com/GjbiHDH.jpg" alt="贴完还是很霸气的，全是赞助商广告哈哈"></p><p><img src="https://i.imgur.com/PnDjx9h.jpg" alt="真容初现"></p><p><img src="https://i.imgur.com/uLwZAe9.jpg" alt="就是这个拼接处装错"></p><p>拼到第三十二页的时候我就弄错了，不能想当然，图里的模型都是有其排列和安装顺序的，一步错后面就很麻烦，需要回炉重造，好在这一步出错后后面就小心许多，顺利了很多。</p><h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><table><thead><tr><th>时间</th><th>进度 (页数)</th></tr></thead><tbody><tr><td>01:11</td><td>P25</td></tr><tr><td>02:06</td><td>P41</td></tr><tr><td>03:15</td><td>P32 (拼错！回炉重造)</td></tr><tr><td>03:37</td><td>P48, P50（流程可以优化）</td></tr><tr><td>03:57</td><td>Part Ⅰ Done!</td></tr><tr><td>05:23</td><td>P77</td></tr><tr><td>06:01</td><td>P88 (聊天时搭建，进度缓慢)</td></tr><tr><td>06:49</td><td>P114</td></tr><tr><td>07:25</td><td>P128 Part ⅠⅠ Done!</td></tr><tr><td>08:14</td><td>P143</td></tr><tr><td>09:11</td><td>P171</td></tr><tr><td>10:17</td><td>P204 Part ⅠⅠⅠ Done!</td></tr><tr><td>12:41</td><td>P266 Part ⅠⅤ Done!</td></tr><tr><td>13:50</td><td>P288 (即将完工)</td></tr><tr><td>14:40 - 15:05</td><td>Finish!</td></tr></tbody></table><p><img src="https://i.imgur.com/19JpnbX.jpg" alt="车头"></p><p><img src="https://i.imgur.com/GTwzBHj.jpg" alt="俯视图"></p><p><img src="https://i.imgur.com/GXrW4Y5.jpg" alt="开一下双门"></p><p>嗯，暂停一下……</p><h2 id="逼死强迫症"><a href="#逼死强迫症" class="headerlink" title="逼死强迫症"></a>逼死强迫症</h2><p><img src="https://i.imgur.com/8jRsQj0.jpg" alt="就是这里不对称，逼疯我，花了一下午时间"></p><p>全部完成后我再把玩，发现有些细节地方没有处理好，比如有些卡扣没有卡到位，是搭建的过程中不够仔细。其中左后轮拱地方不够完美对称，看了直犯强迫症！可就是为了这一步，我又花了整整一下午，连一口水都没喝。差不多就是拆开重造了，而且没有根据图纸来，所以过程尤其痛苦，这边卡扣插进去，那边的卡扣就又蹦了出来，好不容易都摁进去，结果发现尾翼上的积木少了一块（编号 #4160869）！找了一屋子都没有找到。</p><h2 id="改装"><a href="#改装" class="headerlink" title="改装"></a>改装</h2><p>在仔细把玩后发现，原厂的姿态不够<strong>低趴</strong>，一点都不法拉利，根据网上的<a href="https://www.youtube.com/watch?v=5bgz_zE9LjE">教程</a>，把前后桥的悬挂分别做下改动，一番折腾后终于趴了下来，完美！而且我之前在拼的过程中就没有视频中 1:48 下端两根灰色十字小棒（编号 #4211815）了，灵机一动选了稍长一点的黑色十字小棒（编号 #370526）代替。</p><p>前后对比一下，是不是更加气动，更加战斗了。</p><p><img src="https://i.imgur.com/j215ho5.jpg" alt="前"></p><p><img src="https://i.imgur.com/rVwCdyk.jpg" alt="后"></p><h2 id="细节品味"><a href="#细节品味" class="headerlink" title="细节品味"></a>细节品味</h2><p><img src="https://i.imgur.com/8HoZS3S.jpg"></p><p>作为一部中置后驱的跑车，乐高积木还原了后轮驱动时候，汽缸工作的联动场景。方向盘转向也可以带动前轮转动。车门可以开关，比起纯静态的模型有些许可玩性，看了网上的改装视频，因为底盘预留的空间很大，甚至可以加入电机让他真的跑起来。</p><p>最后就是当摆件来欣赏啦，去定制一个亚克力盒子装起来看，好的进口原料的亚克力盒子挺贵的，50 ✖️ 23 ✖️ 16 cm 的盒子要近两百块。</p><p>一次不错的体验，可以让我耐下心来坐了近二十小时来完成。</p>]]></content>
-    
-    
-    <summary type="html">长这么大第一次玩乐高积木，这确实有他的魅力……甚至能治好强迫症</summary>
-    
-    
-    
-    <category term="course" scheme="http://battlele.com/categories/course/"/>
-    
-    
-    <category term="experience" scheme="http://battlele.com/tags/experience/"/>
-    
-    <category term="car" scheme="http://battlele.com/tags/car/"/>
     
   </entry>
   

@@ -16,24 +16,24 @@
   <meta name="author" content="Lucky">
   <meta name="keywords" content="">
   
-    <meta name="description" content="可以把自己的运动数据生成在个人页面，简单直接又美观……">
+    <meta name="description" content="年费域名续费管理也有些门道">
 <meta property="og:type" content="article">
-<meta property="og:title" content="制作个人的 Cycling Page">
-<meta property="og:url" content="http://battlele.com/cycling-page/index.html">
+<meta property="og:title" content="给 Blog 域名续费">
+<meta property="og:url" content="http://battlele.com/renew-domain/index.html">
 <meta property="og:site_name" content="Battle Le 博客">
-<meta property="og:description" content="可以把自己的运动数据生成在个人页面，简单直接又美观……">
+<meta property="og:description" content="年费域名续费管理也有些门道">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.imgur.com/6D3eS12.png">
-<meta property="article:published_time" content="2021-03-09T04:10:00.000Z">
-<meta property="article:modified_time" content="2021-03-09T12:20:08.000Z">
+<meta property="og:image" content="https://i.imgur.com/sKuralc.jpeg">
+<meta property="article:published_time" content="2025-02-07T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-07T14:53:31.171Z">
 <meta property="article:author" content="Lucky">
-<meta property="article:tag" content="skill">
+<meta property="article:tag" content="geek">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://i.imgur.com/6D3eS12.png">
+<meta name="twitter:image" content="https://i.imgur.com/sKuralc.jpeg">
   
   
   
-  <title>制作个人的 Cycling Page - Battle Le 博客</title>
+  <title>给 Blog 域名续费 - Battle Le 博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="制作个人的 Cycling Page"></span>
+            <span id="subtitle" data-typed-text="给 Blog 域名续费"></span>
           
         </div>
 
@@ -238,8 +238,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-03-09 12:10" pubdate>
-          March 9, 2021 pm
+        <time datetime="2025-02-07 23:00" pubdate>
+          February 7, 2025 pm
         </time>
       </span>
     
@@ -251,7 +251,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          730 字
+          1.5k 字
         
       </span>
     
@@ -290,13 +290,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">制作个人的 Cycling Page</h1>
+            <h1 id="seo-header">给 Blog 域名续费</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
                     <!-- compatible with older versions-->
-                    本文最后更新于：March 9, 2021 pm
+                    本文最后更新于：February 7, 2025 pm
                   
                 
               </p>
@@ -304,53 +304,145 @@
             
               <div class="markdown-body">
                 
-                <p><img src="https://i.imgur.com/DEaqf0L.png" srcset="/img/loading.gif" lazyload></p>
-<p>3.5 定的 Reminder，要把 Strava 连接 Garmin 的问题解决，没有解决反而是钻研了一个新玩意儿。在 TG 上搜 Strava 发现某个群聊里提及了一个<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">项目</a>，基于各种运动 App 打造个人跑步主页，点进去一看很 cool，比 Strava 年度总结的更美观，也做一个属于自己的出来。说干就干，打开文档，中英双语，professional（我的英语还有待加强）</p>
-<p><img src="https://i.imgur.com/DalFvff.png" srcset="/img/loading.gif" lazyload alt="这种类似思维导图很对我胃口"></p>
-<h2 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h2><p>然而第一步使用  <code>git clone</code> 就出现了问题……提示网络错误：</p>
-<p><strong>Failed to connect to 127.0.0.1 port 1080: Connection refused.</strong></p>
-<p>我以为是端口问题，把 Clash For Windows 默认的 port 7890 改成 1080 也无济于事，然后问谷老师（Google）答案，搜出来一堆教程都是在命令行配置代理：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">$ git config <span class="hljs-attr">--global</span> https<span class="hljs-selector-class">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:1080</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">$ git config <span class="hljs-attr">--global</span> http<span class="hljs-selector-class">.proxy</span> <span class="hljs-string">&#x27;socks5://127.0.0.1:1080&#x27;</span><br></code></pre></td></tr></table></figure>
-
-<p>诸如此类的，可是统统无用，修改 C:\Users\username\.gitconfig 里面的配置也无济于事。另一种方法用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.gitconfig<br></code></pre></td></tr></table></figure>
-
-<p>来查看：</p>
-<p><img src="https://i.imgur.com/KXzX57a.png" srcset="/img/loading.gif" lazyload alt="cat ~/.gitconfig 后如图所示"></p>
-<p>然后 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ~/.gitconfig <br></code></pre></td></tr></table></figure>
-
-<p><img src="https://i.imgur.com/JW3dtwW.png" srcset="/img/loading.gif" lazyload></p>
-<p>键入 i 进行修改，按 Esc 退出编辑接着键入 :wq 回车完成修改。但是测试</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">curl www<span class="hljs-selector-class">.google</span>.com/curl -v www<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span> <br></code></pre></td></tr></table></figure>
-
-<p>还是会超时，说明命令行还是没有走代理连接。</p>
-<p>换种花样出现 <strong>fatal: unable to access ‘xxx&#x2F;‘: The requested URL returned error: 500</strong></p>
-<p>另一个安装方法，</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">git<span class="hljs-keyword">@github</span>.<span class="hljs-attribute">com</span>:xxx/xxx.git <br></code></pre></td></tr></table></figure>
-
-<p>则会显示:</p>
-<p><strong>bash: <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#x6f;&#109;</a>:xxx&#x2F;xxx.git: No such file or directory</strong></p>
-<p>晕😵</p>
-<hr>
-<p>无奈，只好去作者的 Repo 下载 ZIP 到本地，不够 geek。</p>
-<h2 id="搞掂-Strava-Token"><a href="#搞掂-Strava-Token" class="headerlink" title="搞掂 Strava Token"></a>搞掂 Strava Token</h2><p><img src="https://i.imgur.com/RT1ZQJO.png" srcset="/img/loading.gif" lazyload alt="获取 Strava API Token "></p>
-<p>这个 Website 可以随便填，只要前面加上  <code>https:// </code></p>
-<p>需要注意这里的 client_id，<code>id=$&#123;66666&#125;&amp;</code> 后面直接跟数字,改为 <code>id=66666&amp;</code>，</p>
-<p>点击 Authorize 后会暂时出现页面无法访问，正常的。获取返回的 <strong>refresch_token</strong>，</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">curl</span> <span class="hljs-literal">-X</span> POST https://www.strava.com/oauth/token \<br><span class="hljs-operator">-F</span> client_id=<span class="hljs-variable">$</span>&#123;Your Client ID&#125; \<br><span class="hljs-operator">-F</span> client_secret=<span class="hljs-variable">$</span>&#123;Your Client Secret&#125; \<br><span class="hljs-operator">-F</span> code=<span class="hljs-variable">$</span>&#123;Your Code&#125; \<br><span class="hljs-operator">-F</span> grant_type=authorization_code<br></code></pre></td></tr></table></figure>
-
-<p>没有这个就会出错。因为我没有装 python，所以直接下一步。</p>
-<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>Fork 仓库（其实第一步就应该做的）后，我多做了一步，把<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">全局配置</a>的 token 给设置了。其实只要在 Fork 的 Repo 里</p>
-<p><img src="https://i.imgur.com/37dH5v7.png" srcset="/img/loading.gif" lazyload></p>
-<p>设置三个 token</p>
-<p><img src="https://i.imgur.com/QVUM7Qe.png" srcset="/img/loading.gif" lazyload alt="token 放进 Value 内"></p>
-<p><img src="https://i.imgur.com/ktbv3CD.png" srcset="/img/loading.gif" lazyload alt="看着转半天好忐忑……"></p>
-<p>最后就是部署到公网自己的域名，用 Vercel，只要注册个账号就可以了，很简单，不过要吐槽的是 Vercel 居然不能用 <a href="https://battlele.com/geek/">GV</a> 验证，比 PayPal 还严格啊，尝试了许久收不到 GV 短信，放弃。本想着之后换绑的，都没有找到换绑手机号的界面！</p>
-<p>之后绑定了我买了十年之久的数字域名，美滋滋，终于派上用场了。Github 太香了！然后吃完晚饭（捣鼓一天了）回来看 Push new runs 报错，问大神，原来是 scripts&#x2F;data.db 文件出错，删了就好。我自己是找不到问题的……还有就是跑这个 Run workflow</p>
-<p><img src="https://i.imgur.com/LQ2lBpg.png" srcset="/img/loading.gif" lazyload></p>
-<p>一定要点进去运行。搞定后又去骑 Zwift，好肝的一天啊！不能熬夜，头开始难受了，早点睡，才能多骑车。</p>
+                <h2 id="选择域名供应商"><a href="#选择域名供应商" class="headerlink" title="选择域名供应商"></a>选择域名供应商</h2><p>本博客又到了一年一度的续费时间了，一看续费价格，$17.29。这是欺负我记忆不好，去年还是 $13.95，再前一年是 $10.95，一年比一年贵。作为 Geeker 这不能白白挨宰。做一番功课，大不了每年换一家续费，问了下 ChatGPT，大概有十二家主流域名供应商，分别是：</p>
+<ul>
+<li><p>Namecheap</p>
+</li>
+<li><p>GoDaddy</p>
+</li>
+<li><p>Namesilo</p>
+</li>
+<li><p>Dynadot</p>
+</li>
+<li><p>Domain.com</p>
+</li>
+<li><p>Name.com</p>
+</li>
+<li><p>Google Domains（已并入 Squarespace）</p>
+</li>
+<li><p>Hover</p>
+</li>
+<li><p>Porkbun</p>
+</li>
+<li><p>Cloudflare Domains</p>
+</li>
+<li><p>阿里云&#x2F;腾讯云</p>
+</li>
+</ul>
+<p><img src="https://i.imgur.com/QnCmmRm.jpeg" srcset="/img/loading.gif" lazyload alt="ChatGPT 给的建议（"></p>
+<p>我是在 Namesilo 注册的，当年应该算是低价，现在是越来越杀熟了。其中 Cloudflare 只提供转入域名续费，不支持新注册域名。但是其号称以成本价提供域名注册，没有额外加价。所以其续费价格可作为基准线。很多服务商转入优惠是<del>亏本卖的</del>，所以实际上会比 Cloudflare 还便宜。</p>
+<h2 id="转入域名并续费价格"><a href="#转入域名并续费价格" class="headerlink" title="转入域名并续费价格"></a>转入域名并续费价格</h2><p>以一年的价格来做个排名，我没有测试上述提到的全部十二家，因为本 blog 非备案，所以不考虑国内两家，其余我看过的价格有：</p>
+<p>Spaceship $9.48</p>
+<p>Porkbun 用了 $1 coupon 后 $10.06</p>
+<p>Cloudflare <strong>$10.44</strong></p>
+<p>Dynadot 原价 $10.86 用 coupon 后 $10.49</p>
+<p>Namecheap $11.66</p>
+<p>Name.com $18.17，比 Namesilo 还贵……那向来就不便宜的 GoDaddy 就不用看了，Squarespace 需要注册才能看价格，pass，估计不会便宜。</p>
+<p>本来第一个看的是 Cloudflare，但是其不支持 EPP（Extensible Provisioning Protocol 可扩展供应协议） 或 Auth Code（授权码） 来转移域名，问了下朋友，她的  <code>.com</code> 域名续费是 $10.44。</p>
+<p>其中 Spaceship 相当于 Namecheap 的子品牌，名字起的有意思。由 Namecheap 创始人 Richard Kirkendall 推出，其 UI 是最现代化的，和 Namesilo 形成鲜明的对比啊，一个看起来像二十年前的网站，冲着这点就加分。本来还不知道这个网站， 是 AI <strong>Kimi</strong> 告诉我的，居然帮我省时间了。虽然我是自己交叉验证确认他这个结果是准确的。</p>
+<h2 id="域名比价网站"><a href="#域名比价网站" class="headerlink" title="域名比价网站"></a>域名比价网站</h2><p>还发现几个网站可以参考比价。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://domcomp.com/">https://domcomp.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://tld-list.com/">https://tld-list.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://tldes.com/">https://tldes.com/</a></li>
+</ul>
+<p>其中 Spaceship 均排名靠前，那就他了。</p>
+<h2 id="转移域名"><a href="#转移域名" class="headerlink" title="转移域名"></a>转移域名</h2><p>首先需要 EPP 或者 Auth Code，简单来说，EPP 是域名注册系统的标准通信协议，使不同注册商可以统一管理域名。把域名从一个注册商转移到另一个注册商时，需要提供这个 Auth Code 作为身份验证，防止未经授权的域名转移。</p>
+<p>一开始在 Namesilo 没找到，<a target="_blank" rel="noopener" href="https://www.namesilo.com/blog/en/support-guides/understanding-the-epp-auth-code">翻阅文档</a>才发现需要下载才能找到 EPP 和 NameServer。</p>
+<p><img src="https://i.imgur.com/EQjOO0z.jpeg" srcset="/img/loading.gif" lazyload alt="藏的好深啊"></p>
+<p><strong>域名转移流程（简要）</strong></p>
+<ol>
+<li><p><strong>解锁域名</strong>（Unlock Domain）：在当前注册商后台关闭「域名锁定」</p>
+</li>
+<li><p><strong>获取 Auth Code</strong>（EPP Code）：在要转移的域名商处填写</p>
+</li>
+<li><p><strong>在新注册商提交转移请求</strong>：输入 Auth Code 并支付转移费用（基本就是续费一年的价格）</p>
+</li>
+<li><p><strong>确认转移</strong>：旧注册商可能会发送确认邮件，需要确认转移</p>
+</li>
+<li><p><strong>等待完成</strong>：通常 几分钟到 5 天内转移完成</p>
+</li>
+</ol>
+<p>Unlock Domain 和填入 EPP 后基本上就能成功转出了，注册后登录 Spaceship 支持  Passkey。然后就是付款</p>
+<p><img src="https://i.imgur.com/sKuralc.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p>Spaceship 付款支持支付宝，选项挺多的。在线客服回复很快，很加分，相比之下，Cloudflare 还需要 Business 级别才提供在线支持……<strong>小提示：问一下客服有 coupon 可以用</strong>，TA 发给我「SPSCOMTR」又在原价基础上便宜了 <strong>$1.31</strong>。这比砍一刀爽多了😄</p>
+<p>像我 DNS 设置也没变，就按照之前的，之后折腾下可能换用 Cloudflare NS 接入，配置比较好一点，可以配置免费的域名邮箱啥的。</p>
+<p>经朋友提醒，在收到 Namesilo 迁出邮件后，去<a target="_blank" rel="noopener" href="https://www.namesilo.com/account_transfers.php">这里</a>确认，可以加速迁出，只要几分钟。然后再去 Spaceship Transfer Manager 看下进度，成功后在 Domain Manager 就能看到域名了。</p>
+<p>大功告成🎉</p>
+<h2 id="重新部署-NameServers"><a href="#重新部署-NameServers" class="headerlink" title="重新部署 NameServers"></a>重新部署 NameServers</h2><p>我这个域名是作为 Blog 使用，部署在 GitHub Pages 上，需要重新设置 DNS 记录。也就是添加 <strong>A 记录</strong>和 <strong>CNAME</strong>，五年前做过的早就忘记了，问了下 ChatGPT，他很聪明告诉我，</p>
+<ol>
+<li>登录 GitHub，进入 仓库。</li>
+<li>打开 Settings（设置） → 找到 “Pages” 选项<ol start="3">
+<li><pre><code class="hljs">确认 Pages 已启用，并记住你的 GitHub Pages 站点地址，例如：_github-pages-challenge-用户名
+</code></pre>
+<ol start="4">
+<li><pre><code class="hljs">确认 GitHub Pages 里绑定了你的域名，并启用了 Enforce HTTPS
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>接着在 Spaceship 添加 DNS 记录：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>主机名</th>
+<th><strong>值（IP 地址）</strong></th>
+<th><strong>TTL</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.108.153</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.109.153</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.110.153</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.111.153</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>yourusername.github.io</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>_github-pages-challenge-yourusername.yourdomin.com</td>
+<td>TXT</td>
+<td>Github 生成的</td>
+<td>3600</td>
+</tr>
+</tbody></table>
+<p>获取 GitHub 提供的 TXT 记录</p>
+<p>​	1.	登录 GitHub → 进入你的 仓库。</p>
+<p>​	2.	进入 Settings（设置） → Pages 选项。</p>
+<pre><code class="hljs">3.	在 Custom domain（自定义域名） 部分，输入域名，GitHub 会提示需要验证域名，并给出一条 TXT 记录。
+</code></pre>
+<p>结果实际是我遇到两个问题，Spaceship 提示四条 A 记录冲突，GitHub 提示「We were unable to verify ownership of battlele.com. We couldn’t find the TXT record. Note that DNS changes can take up to 24 hours. 」就是目前无法验证的意思啦。</p>
+<p>我又轱辘来回倒腾，什么删除 DNS 缓存，删掉四条 A 记录都试了，均无法成功。后来请教大神<a href="ttps://idawnlight.com/">余光</a>，他一针见血，是不是我的 <strong>Nameserver 没配置</strong>，还是之前的 Namesilo，域名迁出就停止服务了，换成 Spaceship 默认的，等了一会儿（这时候需要耐心等待 DNS 传播），果然正常可以访问了。</p>
+<p><img src="https://i.imgur.com/1gGvSMZ.jpeg" srcset="/img/loading.gif" lazyload alt="DNS NS 记得修改"></p>
+<p><img src="https://i.imgur.com/daDQq8b.jpeg" srcset="/img/loading.gif" lazyload alt="GitHub 也正常了"></p>
+<p><img src="https://i.imgur.com/tXmtwFH.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p>当然四条 A 记录还是要添加的，都折腾到这了，为了以后不折腾 DNS NS，一劳永逸，就用 Cloudflare 的 NS 服务吧（下午还想着没用上注销掉，晚上就真香了）。</p>
+<p>在 Cloudflare 添加域名，然后自动有搜索 DNS，底部有 Free 计划，下一步后会出现两个地址，在 Spaceship 替换就 OK 了，最后多一步，在 SSL&#x2F;TLS-Overview把模式改为 Full，开启端到端加密。就可以走 Cloudflare 的 CDN 网络了。虽然 GitHub 也是自动强制 HTTPS，应该会自动处理，DNS check successful。完美了✅</p>
 
                 
               </div>
@@ -369,7 +461,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/daily/" class="category-chain-item">daily</a>
+  <a href="/categories/course/" class="category-chain-item">course</a>
   
   
 
@@ -384,7 +476,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/skill/" class="print-no-link">#skill</a>
+        <a href="/tags/geek/" class="print-no-link">#geek</a>
       
     </div>
   
@@ -396,8 +488,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>制作个人的 Cycling Page</div>
-      <div>http://battlele.com/cycling-page/</div>
+      <div>给 Blog 域名续费</div>
+      <div>http://battlele.com/renew-domain/</div>
     </div>
     <div class="license-meta">
       
@@ -409,13 +501,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 9, 2021</div>
+          <div>February 7, 2025</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>Updated on</div>
-          <div>March 9, 2021</div>
+          <div>February 7, 2025</div>
         </div>
       
       
@@ -446,18 +538,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/anti-crash/" title="我的防崩溃机制">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">我的防崩溃机制</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/the-Casual-vacancy/" title="啃旧书系列Ⅰ——The Casual Vacancy">
-                        <span class="hidden-mobile">啃旧书系列Ⅰ——The Casual Vacancy</span>
+                      <a href="/brake-pads/" title="记一次更换汽车刹车片">
+                        <span class="hidden-mobile">记一次更换汽车刹车片</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
